@@ -1,23 +1,21 @@
 import ServiceCard from "./ServiceCard";
-import propertyImage from "../../assets/ceo.jpg";
-import buyBackImage from "../../assets/hero.png";
-import bulkBuyImage from "../../assets/hero.png";
+import propertyImage from "../../assets/heroImage.jpg";
+import buyBackImage from "../../assets/heroImage.jpg";
+import bulkBuyImage from "../../assets/heroImage.jpg";
 
 function Services() {
   const services = [
     {
       id: "1",
       title: "Property Sales",
-      description:
-        "Own prime real estate in our fast-growing, high-demand estate locations. These plots are strategically positioned for rapid appreciation and long-term value growth. Don’t wait — prime properties move fast. Secure yours today before prices rise..",
+      description: "Strategically located plots in high-growth areas.",
       image: { propertyImage },
       buttonLabel: "Browse Properties",
     },
     {
       id: "2",
       title: "Buyback Program",
-      description:
-        "Want guaranteed short-term returns? This is your opportunity. Buy today. Sell back to us within a fixed period. Get guaranteed returns. No stress. No market guesswork. This is the smart investor’s shortcut to predictable profits.",
+      description: "Buy land today, sell back within a fixed period.",
       image: { buyBackImage },
       buttonLabel: "Learn More",
     },
@@ -25,7 +23,7 @@ function Services() {
       id: "3",
       title: "BulkBuy Opportunity",
       description:
-        "Serious investors don’t buy retail — they buy wholesale. Join our exclusive bulk-buy program and unlock:",
+        "Unlock wholesale pricing, higher ROI, and priority allocation.",
       image: { bulkBuyImage },
       buttonLabel: "Learn More",
     },
@@ -35,7 +33,7 @@ function Services() {
       <h1 className="text-3xl sm:text-4xl xl:text-5xl font-[510] text-center">
         Choose Your Investment Strategy
       </h1>
-      <div className="space-y-6">
+      <div className="space-y-6 md:grid md:grid-cols-3 gap-4">
         {services.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}

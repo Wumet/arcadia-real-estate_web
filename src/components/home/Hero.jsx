@@ -3,7 +3,7 @@ import Button from "../Button";
 
 function Hero() {
   return (
-    <div className="relative h-[50vh] md:h-[60vh] lg:h-[75vh] 2xl:h-[80vh]x flex justify-center items-center bg-[url(./assets/hero.png)]x bg-cover bg-no-repeat bg-center py-20 max-sm:px-6 text-neutral-300 z-10">
+    <div className="relative h-[50vh] md:h-[60vh] 2xl:h-[80vh]x flex justify-center items-center py-20 max-sm:px-6 text-neutral-300 z-10">
       <video
         autoPlay
         loop

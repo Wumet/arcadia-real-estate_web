@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 @import "tailwindcss";
 
 @theme {
   /* Fonts */
-  --font-heading: 'SN Pro', sans-serif;
-  --font-body: 'Lato', sans-serif;
+  --font-heading: 'EB Garamond', serif;;
+  --font-body: 'Manrope', sans-serif;
 
   /* Primary Orange Shades */
   --color-primary-50: #FFF8E6;
@@ -45,5 +45,5 @@ th, td{
 }
 
 body {
-@apply bg-background text-foreground tracking-wide font-normal;
+@apply bg-background text-foreground tracking-wide font-normal font-body;
 }

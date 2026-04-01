@@ -9,8 +9,8 @@ function Header() {
   const navLinks = [
     { name: "Overview", path: "/dashboard" },
     { name: "My Properties", path: "/dashboard/myproperties" },
-    { name: "Wallet", path: "/dashboard/wallet" },
     { name: "Payments", path: "/dashboard/payments" },
+    { name: "Wallet", path: "/dashboard/wallet" },
     { name: "Settings", path: "/dashboard/settings" },
   ];
 
@@ -32,7 +32,7 @@ function Header() {
         <Link to="/" className="">
           <img src={Logo} alt="Acardia Logo" className="w-25 sm:w-30 xl:w-35" />
         </Link>
-        <ul className="max-sm:hidden flex gap-8 font-normal tracking-wide opacity-80">
+        <ul className="max-sm:hidden flex gap-8 lg:gap-12 font-normal tracking-wide opacity-80">
           {navLinks.map((navLink) => (
             <li key={navLink.name}>
               <NavLink
@@ -51,7 +51,7 @@ function Header() {
         </ul>
         <div className="max-sm:hidden">
           <IoIosNotifications className="text-2xl" />
-          <button onClick>Log out</button>
+          {/* <button onClick>Log out</button> */}
         </div>
 
         {/* confirm log out modal */}

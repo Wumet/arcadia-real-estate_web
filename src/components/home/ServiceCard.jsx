@@ -1,22 +1,16 @@
 import Button from "../Button";
 import { FaArrowRight } from "react-icons/fa6";
 
-function ServiceCard({ service, children }) {
+function ServiceCard({ service }) {
   return (
-    <div className="flex gap-4 sm:gap-6 2xl:gap-8 p-4 md:p-8 bg-card drop-shadow-xl drop-shadow-neutral-100 grow overflow-hidden rounded-xl">
-      <img
-        src={service.image}
-        alt=""
-        className="bg-cover max-sm:h-60 xl:h-80 w-full bg-center rounded-lg"
-      />
-      <div className="space-y-3">
+    <div className="md:h-100 bg-card drop-shadow-xl drop-shadow-neutral-100 grow overflow-hidden rounded-xl bg-[url(./assets/hero.png)] bg-center bg-cover text-white">
+      <div className="flex flex-col gap-2 justify-end p-4 md:p-6 lg:p-8 w-full h-full bg-linear-to-t from-black from-15% to-black/0">
         <h4 className="text-xl sm:text-2xl font-medium">{service.title}</h4>
-        <p className="max-sm:text-sm">{service.description}</p>
-        <p>{children}</p>
+        <p className="text-sm opacity-80">{service.description}</p>
         <Button
           size="md"
           label={service.buttonLabel}
-          extraClass="!w-[180px] !mt-6"
+          extraClass="!bg-transparent !text-accent !mt-2 !px-0"
           Icon={FaArrowRight}
         />
       </div>
