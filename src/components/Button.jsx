@@ -5,20 +5,21 @@ function Button({
   to,
   label,
   extraClass = "",
-  baseClass = "w-fit flex items-center justify-center gap-2 rounded-md transition duration-600 cursor-pointer text-nowrap font-[510]",
+  baseClass = "w-fit flex items-center justify-center gap-1 rounded-md transition-color duration-50 cursor-pointer text-nowrap",
   variant = "primary",
   size = "lg",
   Icon,
 }) {
   const variants = {
-    primary: "bg-primary-400 text-primary-900 hover:bg-primary-500",
+    primary: "bg-primary-500 text-primary-900 hover:bg-primary-400",
     secondary:
       "bg-secondary-500 text-secondary-900 hover:bg-primary-500 hover:text-neutral-100",
     tertiary: "bg-primary-500/10",
+    outline: "border border-foreground text-foreground",
   };
   const sizes = {
-    lg: "px-6 py-4 text-sm",
-    md: "px-4 py-3 text-[12px] sm:text-sm",
+    lg: "px-6 py-4 text-[16px]",
+    md: "px-3 py-2 text-[10px] sm:text-sm",
     sm: "p-1 text-xs",
   };
 
@@ -29,7 +30,7 @@ function Button({
         className={`${baseClass} ${sizes[size]} ${variants[variant]} ${extraClass}`}
       >
         {label}
-        <span className="text-xs opacity-70">{Icon && <Icon />}</span>
+        <span className="text-xs">{Icon && <Icon />}</span>
       </Link>
     );
   }
@@ -38,7 +39,7 @@ function Button({
       className={`${baseClass} ${sizes[size]} ${variants[variant]} ${extraClass}`}
     >
       {label}
-      <span className="text-xs opacity-70">{Icon && <Icon />}</span>
+      <span className="text-xs">{Icon && <Icon />}</span>
     </button>
   );
 }

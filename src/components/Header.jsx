@@ -4,10 +4,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { useState } from "react";
 
-function Header({ onLogInClick, onCreateAccountClick }) {
+function Header({ onLogInClick }) {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Properties", path: "/properties" },
+    { name: "Investments", path: "/investments" },
     { name: "About", path: "/about" },
     { name: "Contact Us", path: "/contact" },
     { name: "Blog", path: "/blog" },
@@ -21,11 +22,11 @@ function Header({ onLogInClick, onCreateAccountClick }) {
 
   return (
     <>
-      <header className="flex justify-between px-8 xl:px-40 py-5 bg-[#ffffff] sticky top-0 left-0 right-0 z-20">
+      <header className="flex justify-between px-8 xl:px-40 py-5 bg-card sticky top-0 left-0 right-0 z-20 max-sm:text-[16px] max-md:text-sm">
         <Link to="/" className="">
           <img src={Logo} alt="Acardia Logo" className="w-25 sm:w-30 xl:w-35" />
         </Link>
-        <ul className="max-sm:hidden flex gap-8 font-normal tracking-wide opacity-80">
+        <ul className="max-sm:hidden flex gap-6 2xl:gap-8 font-normal tracking-wide opacity-80">
           {navLinks.map((navLink) => (
             <li key={navLink.name}>
               <Link
@@ -42,10 +43,7 @@ function Header({ onLogInClick, onCreateAccountClick }) {
             Login
           </button>
           |
-          <button
-            onClick={onCreateAccountClick}
-            className="pl-2 hover:underline"
-          >
+          <button onClick className="pl-2 hover:underline">
             Create Account
           </button>
         </div>
@@ -68,7 +66,8 @@ function Header({ onLogInClick, onCreateAccountClick }) {
               </li>
             ))}
           </ul>
-          <div className="mt-12 space-y-6">
+          {/* call to action */}
+          {/* <div className="mt-12 space-y-6">
             <button
               onClick={onLogInClick}
               className="w-full border py-2 rounded-md"
@@ -81,7 +80,7 @@ function Header({ onLogInClick, onCreateAccountClick }) {
             >
               Create Account
             </button>
-          </div>
+          </div> */}
         </div>
       )}
     </>

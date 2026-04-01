@@ -1,10 +1,12 @@
-import FeaturedProperties from "../components/FeaturedProperties";
-import Hero from "../components/Hero";
-import WhatsNew from "../components/WhatsNew";
+import FeaturedProperties from "../components/home/FeaturedProperties";
+import Hero from "../components/home/Hero";
+import WhatsNew from "../components/home/WhatsNew";
 import imageUrl from "../assets/heroImage.jpg";
-import Message from "../components/Message";
-import Testimonials from "../components/Testimonials";
+import Message from "../components/home/Message";
+import Testimonials from "../components/home/Testimonials";
 import NewLetterSub from "../components/NewsLetterSub";
+import Services from "../components/home/Services";
+import WhyUs from "../components/home/WhyUS";
 
 function HomePage() {
   const properties = [
@@ -95,15 +97,17 @@ function HomePage() {
   ];
 
   return (
-    <>
+    <main>
       <title>Home</title>
       <Hero />
       <FeaturedProperties properties={properties} />
-      <WhatsNew announcements={announcements} />
-      <Message />
+      <Services />
+      <WhyUs />
       <Testimonials testimonials={testimonials} />
+      <Message />
+      <WhatsNew announcements={announcements} />
       <NewLetterSub />
-    </>
+    </main>
   );
 }
 

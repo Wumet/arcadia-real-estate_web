@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Image from "../assets/luxury-estate.png";
 import memberImage from "../assets/ceo.jpg";
 import Footer from "../components/Footer";
-import Testimonials from "../components/Testimonials";
+import Testimonials from "../components/home/Testimonials";
 import { FaHandshakeAngle } from "react-icons/fa6";
 import Button from "../components/Button";
 
