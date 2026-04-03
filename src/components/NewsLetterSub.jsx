@@ -1,14 +1,12 @@
 import Button from "./Button";
-import ceoImage from "../assets/ceo.jpg";
+import H1 from "./H1";
 
 function NewLetterSub() {
   return (
-    <section className="w-full max-sm:py-14 sm:py-20x 2xl:py-30x px-6 sm:px-10 xl:px-40 2xl:px-50 flex gap-20 xl:gap-60 items-center bg-dark text-neutral-50">
-      <div className="space-y-4 xl:space-y-10">
-        <h1 className="text-2xl sm:text-4xl xl:text-5xl sm:text-nowrap font-[510]">
-          Stay Ahead of the Market
-        </h1>
-        <p className="xl:text-xl font-ligh text-neutral-300">
+    <section className="w-full max-sm:py-14 sm:py-20 2xl:py-30 px-6 sm:px-10 xl:px-40 2xl:px-50 flex gap-20 xl:gap-60 bg-primary-900 text-white">
+      <div className="space-y-8 xl:space-y-10 mx-auto">
+        <H1 title="Stay Ahead of the Market" extraClass="sm:!text-nowrap" />
+        <p className="xl:text-xl font-light text-white/70">
           Join our private newsletter for early alerts on new listings{" "}
           <br className="max-sm:hidden" />
           and exclusive market insights.
@@ -30,11 +28,6 @@ function NewLetterSub() {
           </p>
         </div>
       </div>
-      <img
-        src={ceoImage}
-        alt="A picture of the CEO"
-        className="object-scale-down  h-100 w-100 xl:h-150 md:w-1/2 xl:object-cover max-sm:hidden"
-      />
     </section>
   );
 }

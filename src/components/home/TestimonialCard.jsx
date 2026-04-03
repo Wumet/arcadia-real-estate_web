@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa6";
 
 function TestimonialCard({ t }) {
   return (
-    <div className="h-fit bg-card p-4 sm:p-6 rounded-xl drop-shadow-2xl drop-shadow-gray-700/5 grow space-y-4 2xl:space-y-6 overflow-hidden">
+    <div className="h-fit bg-card p-4 sm:p-6 rounded-xl drop-shadow-2xlx drop-shadow-gray-700/5 grow space-y-4 2xl:space-y-6 overflow-hidden">
       <div className="flex gap-1 items-center text-primary-500 text-xl">
         <FaStar />
         <FaStar />

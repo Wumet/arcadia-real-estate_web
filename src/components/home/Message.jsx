@@ -3,7 +3,7 @@ import ceoImage from "../../assets/ceo.jpg";
 
 function Message() {
   return (
-    <section className="py-14 sm:py-20 2xl:py-30 px-6 sm:pl-10 xl:pl-40 2xl:pl-50 space-y-8 sm:space-y-12 max-sm:flex-col-reverse flex items-center justify-center gap-10 md:gap-14 2xl:gap-20">
+    <section className="py-10 sm:py-14 2xl:py-20 px-6 sm:pl-10 xl:pl-40 2xl:pl-50 space-y-8 sm:space-y-12 max-sm:flex-col-reverse flex items-center justify-center gap-10 md:gap-14 2xl:gap-20">
       <div className="w-full sm:w-1/3 xl:w-fit h-fit xl:h-140 relative">
         <div className="bg-primary-500 -translate-y-4 translate-x-4 absolute inset-0 -z-10 rounded-xl"></div>
         <img

@@ -7,7 +7,7 @@ function NewsCard({ announcement }) {
       <img
         src={announcement.imageUrl}
         alt={announcement.title}
-        className="bg-cover h-full w-full bg-center"
+        className="bg-cover h-full xl:h-100 w-full bg-center"
       />
       <div className="space-y-2">
         <h4 className="text-xl xl:text-xl font-bold ">{announcement.title}</h4>

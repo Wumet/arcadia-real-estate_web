@@ -9,10 +9,10 @@ function PropertyCard({ property }) {
   //   new: "bg-secondary-600 text-neutral-900",
   // };
   return (
-    <div className="pb-4 bg-card drop-shadow-xl drop-shadow-neutral-100 grow overflow-hidden rounded-xl p-3">
+    <div className="pb-4  p-2 bg-card drop-shadow-xl drop-shadow-neutral-100 grow overflow-hidden rounded-xl hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-100">
       <div className="relative ">
         <img
-          src={property.imageUrl}
+          src={property.images.hero}
           alt={property.propertyName}
           className="bg-cover max-xl:h-80 xl:h-90 w-full bg-center rounded-lg"
         />
@@ -22,7 +22,7 @@ function PropertyCard({ property }) {
           {property.tag}
         </p> */}
       </div>
-      <div className="divide-y divide-neutral-100 pt-4 pb-2">
+      <div className="divide-y divide-neutral-100 pt-4 pb-2 px-4">
         <div className="flex justify-between pb-4">
           <div className="space-y-1">
             <h4 className="text-[18px] xl:text-[22px] font-mediumx text-nowrap">
@@ -43,7 +43,7 @@ function PropertyCard({ property }) {
           </div>
           <div className="shrink">
             <Button
-              to="/property"
+              to={`/property/${property.id}/${property.propertyName.replace(/\s+/g, "-").toLowerCase()}`}
               variant="primary"
               size="md"
               label="View Property"

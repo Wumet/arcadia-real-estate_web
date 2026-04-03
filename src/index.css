@@ -3,8 +3,8 @@
 
 @theme {
   /* Fonts */
-  --font-heading: 'EB Garamond', serif;;
-  --font-body: 'Manrope', sans-serif;
+  /* --font-body: 'QuickSand', sans-serif; */
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 
   /* Primary Orange Shades */
   --color-primary-50: #FFF8E6;
@@ -24,8 +24,8 @@
   /* others */
   --color-background: #f8f8f8;
   --color-secondary: #332501;
-  --color-foreground: #1A1301;
-  --color-muted-text: #1A1301;
+  --color-foreground: #0D0900;
+  --color-muted-text: #0D0900/10%;
   --color-card: #ffffff;
 }
 
@@ -45,5 +45,5 @@ th, td{
 }
 
 body {
-@apply bg-background text-foreground tracking-wide font-normal font-body;
+@apply bg-background text-foreground tracking-wide leading-relaxed font-normal font-body;
 }

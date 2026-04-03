@@ -12,6 +12,8 @@ import MyProperties from "./pages/user/MyProperties";
 import Wallet from "./pages/user/Wallet";
 import Payments from "./pages/user/Payments";
 import Settings from "./pages/user/Settings";
+import BuyBack from "./pages/BuyBack";
+import BulkBuy from "./pages/BulkBuy";
 
 function App() {
   return (
@@ -20,10 +22,12 @@ function App() {
         <Route element={<PublicLayout />}>
           <Route index element={<Home />} />
           <Route path="properties" element={<Properties />} />
-          <Route path="property" element={<Property />} />
+          <Route path="/property/:id/:slug" element={<Property />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="blog" element={<Blog />} />
+          <Route path="buyback" element={<BuyBack />} />
+          <Route path="bulkbuy" element={<BulkBuy />} />
         </Route>
 
         {/* Dashboard parent */}

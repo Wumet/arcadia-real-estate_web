@@ -6,43 +6,44 @@ import Message from "../components/home/Message";
 import Testimonials from "../components/home/Testimonials";
 import NewLetterSub from "../components/NewsLetterSub";
 import Services from "../components/home/Services";
-import WhyUs from "../components/home/WhyUS";
+import WhyUs from "../components/WhyUsSection";
 
 function HomePage() {
-  const properties = [
-    {
-      id: "1",
-      propertyName: "The Azure Residence",
-      location: "Old GRA, PH",
-      startingPrice: "₦450,000",
-      tag: "Hot Listing",
-      imageUrl: imageUrl,
-      detailsUrl: "./",
-    },
-    {
-      id: "2",
-      propertyName: "The Sterling Court",
-      location: "GRA Phase 3, PH",
-      startingPrice: "₦350,000",
-      tag: "New Realese",
-      imageUrl: imageUrl,
-      detailsUrl: "./",
-    },
-    {
-      id: "3",
-      propertyName: "The Sterling Court",
-      location: "GRA Phase 3, PH",
-      startingPrice: "₦350,000",
-      tag: "Available",
-      imageUrl: imageUrl,
-      detailsUrl: "./",
-    },
-  ];
+  // const properties = [
+  //   {
+  //     id: "1",
+  //     propertyName: "The Azure Residence",
+  //     location: "Old GRA, PH",
+  //     startingPrice: "₦450,000",
+  //     tag: "Hot Listing",
+  //     imageUrl: imageUrl,
+  //     detailsUrl: "./",
+  //   },
+  //   {
+  //     id: "2",
+  //     propertyName: "The Sterling Court",
+  //     location: "GRA Phase 3, PH",
+  //     startingPrice: "₦350,000",
+  //     tag: "New Realese",
+  //     imageUrl: imageUrl,
+  //     detailsUrl: "./",
+  //   },
+  //   {
+  //     id: "3",
+  //     propertyName: "The Sterling Court",
+  //     location: "GRA Phase 3, PH",
+  //     startingPrice: "₦350,000",
+  //     tag: "Available",
+  //     imageUrl: imageUrl,
+  //     detailsUrl: "./",
+  //   },
+  // ];
 
   const announcements = [
     {
       id: "1",
-      imageUrl: imageUrl,
+      imageUrl:
+        "https://res.cloudinary.com/do36hdyrf/image/upload/point3d-commercial-imaging-ltd-swXXVeluuNM-unsplash_ntycsv.jpg",
       tag: "New Launch",
       title: "The Sovereign Phase II",
       cta: "Learn More",
@@ -51,7 +52,8 @@ function HomePage() {
     },
     {
       id: "2",
-      imageUrl: imageUrl,
+      imageUrl:
+        "https://res.cloudinary.com/do36hdyrf/image/upload/point3d-commercial-imaging-ltd-swXXVeluuNM-unsplash_ntycsv.jpg",
       tag: "New Launch",
       title: "Early Access Benefit",
       cta: "Secure Access",
@@ -60,7 +62,8 @@ function HomePage() {
     },
     {
       id: "3",
-      imageUrl: imageUrl,
+      imageUrl:
+        "https://res.cloudinary.com/do36hdyrf/image/upload/point3d-commercial-imaging-ltd-swXXVeluuNM-unsplash_ntycsv.jpg",
       tag: "New Launch",
       title: "Global Market Brief",
       cta: "Secure Access",
@@ -100,7 +103,7 @@ function HomePage() {
     <main>
       <title>Home</title>
       <Hero />
-      <FeaturedProperties properties={properties} />
+      <FeaturedProperties />
       <Services />
       <WhyUs />
       <Testimonials testimonials={testimonials} />

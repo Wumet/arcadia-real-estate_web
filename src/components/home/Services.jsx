@@ -1,7 +1,5 @@
 import ServiceCard from "./ServiceCard";
-import propertyImage from "../../assets/heroImage.jpg";
-import buyBackImage from "../../assets/heroImage.jpg";
-import bulkBuyImage from "../../assets/heroImage.jpg";
+import H1 from "../H1";
 
 function Services() {
   const services = [
@@ -9,33 +7,43 @@ function Services() {
       id: "1",
       title: "Property Sales",
       description: "Strategically located plots in high-growth areas.",
-      image: { propertyImage },
+      image:
+        "https://res.cloudinary.com/do36hdyrf/image/upload/houseminature_ervknw.jpg",
       buttonLabel: "Browse Properties",
+      path: "/properties",
     },
     {
       id: "2",
       title: "Buyback Program",
       description: "Buy land today, sell back within a fixed period.",
-      image: { buyBackImage },
+      image:
+        "https://res.cloudinary.com/do36hdyrf/image/upload/cytonn-photography-vWchRczcQwM-unsplash_hkmqhl.jpg",
       buttonLabel: "Learn More",
+      path: "/buyback",
     },
     {
       id: "3",
       title: "BulkBuy Opportunity",
       description:
         "Unlock wholesale pricing, higher ROI, and priority allocation.",
-      image: { bulkBuyImage },
+      image:
+        "https://res.cloudinary.com/do36hdyrf/image/upload/land1_ijzxrj.jpg",
       buttonLabel: "Learn More",
+      path: "/bulkbuy",
     },
   ];
   return (
-    <section className="py-10 sm:py-14 2xl:py-20  px-6 sm:px-10 xl:px-40 2xl:px-50 space-y-8 sm:space-y-12">
-      <h1 className="text-3xl sm:text-4xl xl:text-5xl font-[510] text-center">
-        Choose Your Investment Strategy
-      </h1>
-      <div className="space-y-6 md:grid md:grid-cols-3 gap-4">
+    <section className="py-10 sm:py-14 xl:py-20  px-6 sm:px-10 xl:px-40 2xl:px-50 space-y-8 sm:space-y-12">
+      <div className="flex max-sm:flex-col justify-between sm:items-center">
+        <H1 label="Our Services" title="Investment Strategies" />
+        <p className="xl:text-xl text-neutral-600 text-rightx">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam
+          sit amet diam elit.
+        </p>
+      </div>
+      <div className="max-md:space-y-6 md:grid md:grid-cols-3 gap-4 xl:gap-6">
         {services.map((service) => (
-          <ServiceCard key={service.id} service={service} />
+          <ServiceCard key={service.id} service={service} to={service.path} />
         ))}
       </div>
     </section>
