@@ -137,12 +137,7 @@ function BuyBack() {
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-10 lg:gap-14 items-start lg:items-center">
           <div className="flex-1 space-y-4 sm:flex flex-col">
             <H1
-              title={
-                <>
-                  Arcadia Land <br />
-                  BuyBack Investment
-                </>
-              }
+              title={<>Arcadia Land Buyback Investment</>}
               extraClass="max-sm:!text-center"
             />
             <p className="leading-relaxed">
@@ -158,7 +153,7 @@ function BuyBack() {
               <button
                 type="button"
                 onClick={onHeroCTA}
-                className="bg-primary-500 text-primary-900 rounded-[8px] px-10 py-4 font-semibold hover:bg-primary-400 transition-colors w-full sm:w-fit"
+                className="bg-primary-500 rounded-lg px-10 py-4 font-medium hover:bg-primary-400 transition-colors w-full sm:w-fit max-sm:text-sm"
               >
                 Submit Expression of Interest
               </button>

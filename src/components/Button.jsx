@@ -5,7 +5,7 @@ function Button({
   to,
   label,
   extraClass = "",
-  baseClass = "w-fit font-semibold flex items-center justify-center gap-2 rounded-md transition-color duration-50 cursor-pointer text-nowrap",
+  baseClass = "w-fit font-medium flex items-center justify-center gap-2 rounded-md transition-color duration-50 cursor-pointer text-nowrap",
   variant = "primary",
   size = "lg",
   Icon,

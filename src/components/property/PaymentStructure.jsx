@@ -1,4 +1,4 @@
-import { FaLocationDot } from "react-icons/fa6";
+import { FaCartArrowDown, FaLocationDot } from "react-icons/fa6";
 import H1 from "../H1";
 import Button from "../Button";
 
@@ -15,7 +15,9 @@ function PropertyHero({ property }) {
         <div className="p-6 bg-foreground rounded-xl text-background flex justify-between">
           {/* left */}
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-background rounded-full"></div>
+            <div className="flex items-center justify-center size-12 bg-primary-500/20 rounded-full">
+              <FaCartArrowDown className="text-primary-500 text-xl" />
+            </div>
             <div className="">
               <p className="font-bold font-xl">Outright Purchase</p>
               <p className="text-sm opacity-70">

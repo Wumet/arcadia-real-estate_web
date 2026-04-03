@@ -65,9 +65,9 @@ function Header({ onLogInClick }) {
                   >
                     {link.name} {link.icon}
                   </button>
-
+                  {/* dropdown */}
                   {openDropdown === link.name && (
-                    <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-40 z-50 py-4">
+                    <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-fit z-50 py-4">
                       {link.children.map((child) => (
                         <li
                           key={child.name}

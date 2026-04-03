@@ -251,10 +251,10 @@ function BulkBuy() {
                       />
                     </div>
                     <div className="">
-                      <h3 className="text-xl font-semibold capitalize">
+                      <h3 className="text-base sm:text-xl font-semibold capitalize">
                         {benefit.title}
                       </h3>
-                      <p className="text-base text-foreground/70 leading-relaxed max-w-[347px]">
+                      <p className="text-xs sm:text-base text-foreground/70 leading-relaxed max-w-[347px]">
                         {benefit.body}
                       </p>
                     </div>
@@ -277,7 +277,7 @@ function BulkBuy() {
               key={f.id}
               className="bg-card rounded-xl p-4 shadow-[0px_10px_40px_rgba(0,0,0,0.02)] flex flex-col"
             >
-              <div className="rounded-[20px] overflow-hidden aspect-[4/3] w-full">
+              <div className="rounded-[20px] overflow-hidden aspect-4/3 w-full">
                 <img src={f.image} alt="" className="size-full object-cover" />
               </div>
               <div className="pt-6 pb-4 px-2 flex flex-col gap-6 flex-1">
@@ -312,7 +312,7 @@ function BulkBuy() {
                 </div>
                 <Button
                   label="Submit Expression of Interest"
-                  size="md"
+                  size="lg"
                   extraClass="!w-full !justify-center !rounded-lg"
                 />
               </div>
