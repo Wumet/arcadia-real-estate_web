@@ -253,20 +253,20 @@ function BuyBack() {
               </div>
             </div>
 
-            <div className="flex-1 !w-full lg:w-2/3 space-y-5">
+            <div className="flex-1 w-full! lg:w-2/3 space-y-5">
               {INVESTMENT_STEPS.map((step) => (
                 <div
                   key={step.n}
-                  className="bg-card rounded-xl p-6 flex max-sm:flex-colx gap-4 items-start shadow-sm shadow-gray-200"
+                  className="bg-card rounded-xl p-6 flex gap-4 items-start shadow-sm shadow-gray-200"
                 >
                   <div className="text-3xl sm:text-4xl lg:text-5xl font-bold italic text-primary-500 leading-none shrink-0">
                     {step.n}
                   </div>
                   <div className="space-y-1">
-                    <h3 className="text-lg sm:text-xl font-semibold capitalize">
+                    <h3 className="text-base sm:text-xl font-semibold capitalize">
                       {step.title}
                     </h3>
-                    <p className="max-sm:text-sm text-foreground/70">
+                    <p className="max-sm:text-sm sm:text-base text-foreground/70">
                       {step.body}
                     </p>
                     {step.sub && <p className="">{step.sub}</p>}

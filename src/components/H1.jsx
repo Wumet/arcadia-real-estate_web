@@ -10,7 +10,7 @@ function H1({ title, label, textAlign = "left", extraClass }) {
       )}
 
       <h1
-        className={`mt-2 text-[28px] sm:text-[32px] 2xl:text-[40px] font-bold leading-10 sm:leading-14 capitalize xl:leading-16 ${extraClass}`}
+        className={`mt-2 text-[28px] sm:text-[32px] 2xl:text-[40px] font-bold leading-8 sm:leading-12 capitalize xl:leading-16 ${extraClass}`}
       >
         {title}
       </h1>

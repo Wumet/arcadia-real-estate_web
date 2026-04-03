@@ -350,10 +350,10 @@ function BulkBuy() {
                   {step.n}
                 </span>
                 <div className="space-y-1">
-                  <h3 className="text-lg sm:text-xl font-semibold capitalize">
+                  <h3 className="text-base sm:text-xl font-semibold capitalize">
                     {step.title}
                   </h3>
-                  <p className="text-foreground/70 leading-relaxed">
+                  <p className="text-xs sm:text-base text-foreground/70 leading-relaxed">
                     {step.body}
                   </p>
                 </div>
@@ -370,12 +370,7 @@ function BulkBuy() {
       <section className="xl:mt-10 bg-primary-900 px-6 sm:px-10 xl:px-36 2xl:px-44 py-14 sm:py-20 text-white">
         <div className=" mx-auto text-center space-y-6 py-4">
           <H1
-            title={
-              <>
-                Secure Land Before the <br className="lg:hidden" />
-                Market Moves
-              </>
-            }
+            title={<>Secure Land Before the Market Moves</>}
             textAlign="center"
             extraClass="!text-3xl sm:!text-5xl 2xl:!text-6xl !leading-12 sm:!leading-18 !text-primary-300 !font-black"
           />
@@ -383,7 +378,7 @@ function BulkBuy() {
             The most significant real estate gains are created before public
             market entry. Arcadia BulkBuy positions you ahead of the curve.
           </p>
-          <div className="flex flex-col-reverse sm:flex-row gap-4 sm:gap-8 justify-center pt-4 max-w-xl mx-auto">
+          <div className="flex flex-col-reverse sm:flex-row gap-6 sm:gap-8 justify-center pt-4 max-w-xl mx-auto">
             <Button
               to="/properties"
               label="View Available Listings"
