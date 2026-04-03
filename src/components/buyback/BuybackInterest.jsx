@@ -60,7 +60,7 @@ function BuybackInterest() {
             onSubmit={(e) => e.preventDefault()}
             className="flex flex-col gap-8"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Input
                 label="Full Name"
                 type="text"
@@ -83,7 +83,7 @@ function BuybackInterest() {
               />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Input
                   label="Email Address"
@@ -121,7 +121,7 @@ function BuybackInterest() {
                 value={form.amount}
                 onChange={onChange("amount")}
               />
-              <p className="text-sm text-foreground/60">
+              <p className="text-xs text-foreground/60">
                 Mininimum Amount: #1,000,000
               </p>
             </div>
@@ -130,7 +130,7 @@ function BuybackInterest() {
               <button
                 type="submit"
                 disabled={!canSubmit}
-                className={`!rounded-lg !w-[260px] !h-[56px] flex items-center justify-center rounded-lg px-6 text-[16px] font-semibold transition-colors ${
+                className={`rounded-lg! w-full! h-[56px]! flex items-center justify-center px-6 text-[14px] font-medium transition-colors ${
                   canSubmit
                     ? "bg-primary-500 text-primary-900 hover:bg-primary-400"
                     : "bg-primary-500/50 text-primary-900 cursor-not-allowed"

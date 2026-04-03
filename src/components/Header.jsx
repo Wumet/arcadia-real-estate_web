@@ -43,71 +43,73 @@ function Header({ onLogInClick }) {
   };
 
   return (
-    <header className="flex justify-between px-8 xl:px-40 py-5 bg-card sticky top-0 left-0 right-0 z-50 max-sm:text-[16px] max-md:text-sm">
-      <Link to="/" className="">
-        <img src={Logo} alt="Acardia Logo" className="w-25 sm:w-30 xl:w-35" />
-      </Link>
+    <>
+      <header className="flex justify-between px-8 xl:px-40 py-5 bg-card sticky top-0 left-0 right-0 z-50 max-sm:text-[16px] max-md:text-sm">
+        <Link to="/" className="">
+          <img src={Logo} alt="Acardia Logo" className="w-25 sm:w-30 xl:w-35" />
+        </Link>
 
-      {/* Desktop nav menu */}
-      <ul className="max-sm:hidden max-lg:text-sm flex gap-5 2xl:gap-8">
-        {links.map((link) => (
-          <li key={link.name} className="relative">
-            {link.children ? (
-              <>
-                <button
-                  className="flex items-center gap-1 font-medium text-gray-800"
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === link.name ? null : link.name,
-                    )
-                  }
-                >
-                  {link.name} {link.icon}
-                </button>
+        {/* Desktop nav menu */}
+        <ul className="max-sm:hidden flex gap-5 2xl:gap-8">
+          {links.map((link) => (
+            <li key={link.name} className="relative">
+              {link.children ? (
+                <>
+                  <button
+                    className="flex items-center gap-1 font-medium text-gray-800"
+                    onClick={() =>
+                      setOpenDropdown(
+                        openDropdown === link.name ? null : link.name,
+                      )
+                    }
+                  >
+                    {link.name} {link.icon}
+                  </button>
 
-                {openDropdown === link.name && (
-                  <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-40 z-50 py-4">
-                    {link.children.map((child) => (
-                      <li
-                        key={child.name}
-                        className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-nowrap"
-                      >
-                        <Link to={child.path}>{child.name}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </>
-            ) : (
-              <Link to={link.path} className="font-medium text-gray-800">
-                {link.name}
-              </Link>
-            )}
-          </li>
-        ))}
-      </ul>
-      <div className="max-sm:hidden max-lg:text-sm">
-        <button onClick={onLogInClick} className="pr-2 hover:underline">
-          Login
+                  {openDropdown === link.name && (
+                    <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-40 z-50 py-4">
+                      {link.children.map((child) => (
+                        <li
+                          key={child.name}
+                          className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-nowrap"
+                        >
+                          <Link to={child.path}>{child.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : (
+                <Link to={link.path} className="font-medium text-gray-800">
+                  {link.name}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
+        <div className="max-sm:hidden max-lg:text-sm">
+          <button onClick={onLogInClick} className="pr-2 hover:underline">
+            Login
+          </button>
+          |<button className="pl-2 hover:underline">Create Account</button>
+        </div>
+        <button className="sm:hidden text-xl" onClick={handleClick}>
+          {isOpen ? <MdClose /> : <GiHamburgerMenu />}
         </button>
-        |<button className="pl-2 hover:underline">Create Account</button>
-      </div>
-      <button className="sm:hidden text-xl" onClick={handleClick}>
-        {isOpen ? <MdClose /> : <GiHamburgerMenu />}
-      </button>
+      </header>
 
       {/* mobile nav menu  */}
       {isOpen && (
         <div
-          className={`sm:hidden fixed right-0 w-5/6 bg-white z-20 p-8 shadow-lg transition-[height] duration-500 ease-in-out ${isOpen ? "h-[99vh]" : "max-h-0"}`}
+          className={`text-sm sm:hidden fixed right-0 w-5/6 bg-white z-20 p-8 shadow-lg transition-[height] duration-500 ease-in-out ${isOpen ? "h-[99vh]" : "max-h-0"}`}
         >
-          <ul className="flex flex-col gap-8 font-medium tracking-wide opacity-70">
+          <ul className="text-base flex flex-col gap-8 font-medium tracking-wide opacity-70">
             {links.map((link) => (
               <li key={link.name}>
                 {link.children ? (
                   <>
                     <button
-                      className="flex items-center justify-between w-full text-xl"
+                      className="flex items-center justify-between w-full"
                       onClick={() =>
                         setMobileDropdown(
                           mobileDropdown === link.name ? null : link.name,
@@ -122,7 +124,11 @@ function Header({ onLogInClick }) {
                       <ul className="ml-2 pt-4 flex flex-col gap-4">
                         {link.children.map((child) => (
                           <li key={child.name}>
-                            <Link to={child.path} className="text-lg">
+                            <Link
+                              to={child.path}
+                              className=""
+                              onClick={() => setIsOpen(false)}
+                            >
                               {child.name}
                             </Link>
                           </li>
@@ -131,7 +137,11 @@ function Header({ onLogInClick }) {
                     )}
                   </>
                 ) : (
-                  <Link to={link.path} className="text-xl">
+                  <Link
+                    to={link.path}
+                    className=""
+                    onClick={() => setIsOpen(false)}
+                  >
                     {link.name}
                   </Link>
                 )}
@@ -155,7 +165,7 @@ function Header({ onLogInClick }) {
           </div> */}
         </div>
       )}
-    </header>
+    </>
   );
 }
 

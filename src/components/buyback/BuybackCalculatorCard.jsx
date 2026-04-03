@@ -58,7 +58,7 @@ function BuybackCalculatorCard() {
   }, [amount, selected.rate]);
 
   return (
-    <aside className="bg-foreground text-card rounded-[25px] shadow-[0px_-10px_40px_0px_rgba(88,67,13,0.1),0px_10px_20px_0px_rgba(88,67,13,0.1)] px-8 py-10 w-full lg:w-[596px]">
+    <aside className="bg-foreground text-card rounded-2xl px-8 py-10 w-full lg:w-[596px]">
       <h3 className="text-card text-base sm:text-[22px] font-semibold leading-tight mb-4">
         Calculate Returns
       </h3>
@@ -66,7 +66,7 @@ function BuybackCalculatorCard() {
       <div className="grid grid-cols-1 gap-6">
         {/* Amount Input */}
         <div className="mt-2">
-          <label className="pl-2 block text-white/90 text-xs mb-2">
+          <label className="pl-2 block text-white/90 text-xs mb-3">
             Input Amount
           </label>
           <input
@@ -75,7 +75,7 @@ function BuybackCalculatorCard() {
             onChange={(e) =>
               handleAmountChange(clampNonNegativeNumber(e.target.value))
             }
-            className="w-full bg-transparent border border-secondary/70 rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-[0.3px] focus:border-primary-700"
+            className="w-full bg-transparent border border-primary-700/40 rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-primary-700/70"
             placeholder="1000000"
           />
           <p
@@ -88,13 +88,13 @@ function BuybackCalculatorCard() {
         </div>
         {/* duration input */}
         <div className="">
-          <label className="pl-2 block text-white/90 text-xs mb-2">
+          <label className="pl-2 block text-white/90 text-xs mb-3">
             Select Duration
           </label>
           <select
             value={durationLabel}
             onChange={(e) => handleDurationChange(e.target.value)}
-            className="w-full bg-transparent border border-secondary/70 rounded-md px-4 py-3 text-white focus:outline-none"
+            className="w-full bg-transparent border border-primary-700/40 rounded-md px-4 py-3 text-white placeholder:text-white/40 focus:outline-none"
           >
             {DURATION_OPTIONS.map((d) => (
               <option key={d.label} value={d.label} className="text-black">
@@ -108,7 +108,7 @@ function BuybackCalculatorCard() {
           <p className="text-card text-lg font-medium mb-5">Estimated Return</p>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-primary-700/10 rounded-lg  px-3 sm:px-6 py-5">
+            <div className="bg-primary-800/20 rounded-lg  px-3 sm:px-6 py-5">
               <p className="text-white/70 max-sm:text-xs text-sm mb-2">
                 Profit
               </p>
@@ -116,7 +116,7 @@ function BuybackCalculatorCard() {
                 {isBelowMinimum ? formatNaira(0) : formatNaira(profit)}
               </p>
             </div>
-            <div className="bg-primary-700/10 rounded-lg px-3 sm:px-6 py-5">
+            <div className="bg-primary-800/20 rounded-lg px-3 sm:px-6 py-5">
               <p className="text-white/70 max-sm:text-xs text-sm mb-2">
                 Total Payout
               </p>

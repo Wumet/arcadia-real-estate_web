@@ -1,11 +1,8 @@
 import { useRef } from "react";
 import BuybackCalculatorCard from "../components/buyback/BuybackCalculatorCard";
 import BuybackInterest from "../components/buyback/BuybackInterest";
-import heroImg from "../assets/heroImage.jpg";
 import H1 from "../components/H1";
-import Button from "../components/Button";
 import { formatNaira } from "../components/utils/formatNaira";
-import { PiCertificateFill } from "react-icons/pi";
 import { CgFileDocument } from "react-icons/cg";
 import { MdDomainVerification } from "react-icons/md";
 import { LiaFileContractSolid } from "react-icons/lia";
@@ -146,6 +143,7 @@ function BuyBack() {
                   BuyBack Investment
                 </>
               }
+              extraClass="max-sm:!text-center"
             />
             <p className="leading-relaxed">
               Invest in physical land today. Receive a pre-agreed return within
@@ -202,7 +200,7 @@ function BuyBack() {
 
           <div className="rounded-xl overflow-hidden drop-shadow-xl drop-shadow-gray-100 bg-card">
             <div className="px-10 py-8 bg-card">
-              <div className="grid grid-cols-3 gap-4 text-sm sm:text-base text-foreground/60 tracking-tight">
+              <div className="grid grid-cols-3 gap-4 text-xs sm:text-base text-foreground/60 tracking-tight">
                 <div>Duration</div>
                 <div>Fixed Return</div>
                 <div className="text-center">
@@ -213,7 +211,7 @@ function BuyBack() {
             {fixedReturnRows.map((row, idx) => (
               <div
                 key={row.months}
-                className={`${idx % 2 === 0 ? "bg-[#f0f0f0]" : "bg-transparent"} px-10 py-7 text-[18px] sm:text-[22px] text-foreground flex gap-4 items-center font-semibold`}
+                className={`${idx % 2 === 0 ? "bg-[#f0f0f0]" : "bg-transparent"} px-10 py-7 text-sm sm:text-[18px] xl:text-[22px] text-foreground flex gap-4 items-center font-semibold`}
               >
                 <div className="flex-1">{row.months}</div>
                 <div className="flex-1">{row.rate}</div>
@@ -335,10 +333,10 @@ function BuyBack() {
         <div className="max-w-6xl mx-auto bg-background">
           <div className="rounded-xl bg-foreground text-background px-8 sm:px-12 py-10 sm:py-14">
             <div className="flex flex-col sm:items-center sm:text-center gap-4 lg:gap-6">
-              <h2 className="text-[32px] sm:text-[48px] font-bold">
+              <h2 className="text-[24px] sm:text-[48px] font-bold">
                 Limited Allocation Availability
               </h2>
-              <p className="text-[16px] sm:text-base opacity-80 max-w-4xl leading-relaxed mb-4">
+              <p className="text-sm sm:text-base opacity-80 max-w-4xl leading-relaxed mb-4">
                 Because each investment is tied to specific land units, the
                 number of available positions in the BuyBack program is limited.
                 Participation is offered on a first-come, first-served basis
@@ -347,7 +345,7 @@ function BuyBack() {
               <button
                 type="button"
                 onClick={onHeroCTA}
-                className="bg-primary-500 text-primary-900 rounded-[8px] px-10 py-4 font-semibold hover:bg-primary-400 transition-colors w-full sm:w-fit"
+                className="bg-primary-500 text-sm text-primary-900 rounded-[8px] px-10 py-4 font-semibold text-nowrap hover:bg-primary-400 transition-colors w-full sm:w-fit"
               >
                 Submit Expression of Interest
               </button>
@@ -364,18 +362,23 @@ function BuyBack() {
           {/* cards */}
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {WHY_CARDS.map((c) => (
-              <div key={c.n} className="">
-                <div className="flex gap-4 items-start mb-4">
-                  <div className="relative size-12 sm:size-16 rounded-full bg-secondary grid place-items-center">
-                    <span className="font-bold italic text-primary-500 leading-none">
+              <div
+                key={c.n}
+                className="flex flex-col max-sm:items-center max-sm:text-center"
+              >
+                <div className="flex gap-4 items-start sm:mb-3">
+                  <div className="relative size-10 sm:size-16 rounded-full bg-secondary grid place-items-center">
+                    <span className="font-bold max-sm:text-sm italic text-primary-500 leading-none">
                       {c.n}
                     </span>
                   </div>
                 </div>
-                <h3 className="capitalize font-semibold text-foreground mb-3">
+                <h3 className="capitalize font-semibold text-foreground sm:mb-3">
                   {c.title}
                 </h3>
-                <p className="text-foreground/70 leading-relaxed">{c.body}</p>
+                <p className="max-sm:w-2/3 max-sm:text-xs text-foreground/70 leading-relaxed">
+                  {c.body}
+                </p>
               </div>
             ))}
           </div>
