@@ -32,7 +32,7 @@ function BuybackInterest() {
 
   return (
     <section className="px-6 sm:px-10 xl:px-36 2xl:px-44  py-4 sm:py-14 2xl:py-20">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-14 items-start">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row gap-10 lg:gap-14 items-start">
         <div className="w-full lg:flex-[1_0_0] space-y-4">
           <H1 title="  Express your Interest" label="Don't wait" />
           <p className="">Submit an Expression of Interest to receive::</p>
