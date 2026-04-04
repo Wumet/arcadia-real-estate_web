@@ -4,10 +4,10 @@ import Button from "../Button";
 
 function PropertyHero({ property }) {
   return (
-    <section className="py-6 sm:py-14 2xl:py-20 px-6 sm:px-10 xl:px-40 2xl:px-50 max-sm:flex flex-col-reverse md:grid grid-cols-2 gap-10 md:gap-20 xl:gap-40">
+    <section className="py-6 xl:py-14 px-6 sm:px-10 xl:px-40 2xl:px-50 max-sm:flex flex-col md:grid grid-cols-2 gap-10 md:gap-20 xl:gap-40">
       {/* image and thumbnails */}
       <div className="h-full">
-        <img src={property.images.hero} className="" alt="" />
+        <img src={property.images.hero} className="rounded-xl" alt="" />
         <div className=""></div>
       </div>
       {/* left */}
@@ -29,7 +29,7 @@ function PropertyHero({ property }) {
         {/* description */}
         <p className="leading-8">{property.description}</p>
         {/* buttons */}
-        <div className="flex gap-6 mt-4">
+        {/* <div className="flex gap-6 mt-4">
           <Button label="BUY NOW" extraClass="!uppercase !w-full" size="lg" />
           <Button
             label="subscribe"
@@ -37,7 +37,7 @@ function PropertyHero({ property }) {
             size="lg"
             variant="outline"
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

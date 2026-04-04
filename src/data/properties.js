@@ -28,10 +28,14 @@ const properties = [
     paymentStructure: {
       outright: { price: formatNaira(4000000), cta: "BUY NOW" },
       monthly: [
-        { duration: "3 Months", deposit: formatNaira(500000), totalPrice: 4250000, cta: "SUBSCRIBE" }
+        { duration: "3 Months", deposit: formatNaira(500000), totalPrice: formatNaira(4250000), cta: "SUBSCRIBE" },
+        { duration: "6 Months", deposit: formatNaira(500000), totalPrice: formatNaira(4500000), cta: "SUBSCRIBE" },
+        { duration: "12 Months", deposit: formatNaira(500000), totalPrice: formatNaira(6000000), cta: "SUBSCRIBE" }
       ],
       weekly: [
-        { duration: "13 Weeks", weeklyPayment:formatNaira(330000), cta: "SUBSCRIBE" }
+        { duration: "13 Weeks", weeklyPayment:formatNaira(330000), cta: "SUBSCRIBE" },
+        { duration: "26 Weeks", weeklyPayment:formatNaira(177000), cta: "SUBSCRIBE" },
+        { duration: "52 Weeks", weeklyPayment:formatNaira(173000), cta: "SUBSCRIBE" }
       ]
     },
     map: { embedLink: "https://maps.google.com/?q=Old+GRA+PH", address: "Old GRA, Port Harcourt" }

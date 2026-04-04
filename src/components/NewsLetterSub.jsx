@@ -3,26 +3,32 @@ import H1 from "./H1";
 
 function NewLetterSub() {
   return (
-    <section className="w-full py-10 sm:py-20 2xl:py-30 px-6 sm:px-10 xl:px-40 2xl:px-50 flex gap-20 xl:gap-60 bg-primary-900 text-white">
-      <div className="space-y-8 xl:space-y-10 mx-auto">
-        <H1 title="Stay Ahead of the Market" extraClass="sm:!text-nowrap" />
-        <p className="xl:text-xl font-light text-white/70">
-          Join our private newsletter for early alerts on new listings{" "}
-          <br className="max-sm:hidden" />
+    <section className="py-10 sm:py-14 2xl:py-20 px-6 sm:px-10 xl:px-40 2xl:px-50 flex gap-20 xl:gap-60">
+      <div className="space-y-5 xl:space-y-8 mx-auto sm:text-center">
+        <h1 className="text-3xl sm:text-5xl 2xl:text-6xl leading-12 font-semibold">
+          Stay Ahead of the Market
+        </h1>
+        <p className="xl:text-xl font-light">
+          Join our private newsletter for early alerts on new listings
+          <br aria-hidden className="max-sm:hidden" />
           and exclusive market insights.
         </p>
-        <div className="">
-          <div className="flex gap-4 max-sm:flex-col">
+        <div className="mt- sm:mt-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <input
               type="email"
               name=""
               id=""
               placeholder="Input email"
-              className="border-[0.5px] rounded-md p-4 h-fit w-full focus:outline-none focus:border focus:border-primary-500"
+              className="sm:w-80 border-[0.5px] border-primary-700 rounded-md p-4 focus:outline-none focus:border focus:border-primary-700"
             />
-            <Button label="Subscribe Now" extraClass="text-nowrap" size="lg" />
+            <Button
+              label="Subscribe Now"
+              extraClass="text-nowrap max-sm:w-full! h-full!"
+              size="lg"
+            />
           </div>
-          <p className="text-sm sm:text-nowrap mt-4 font-lightx text-neutral-500">
+          <p className="text-xs sm:text-nowrap mt-4 opacity-50">
             By subscribing, you agree to our Privacy Policy and Terms of
             Service.
           </p>

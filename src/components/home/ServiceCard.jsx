@@ -11,7 +11,7 @@ function ServiceCard({ service }) {
           alt={service.title}
           className="rounded-xl w-full h-full sm:h-50 xl:h-80 bg-center"
         />
-        <div className="rounded-xl absolute inset-0 bg-black/30"></div>
+        <div className="rounded-xl absolute inset-0 bg-primary-800/30"></div>
       </div>
       {/* Text */}
       <div className="flex flex-col justify-between">

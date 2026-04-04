@@ -7,7 +7,7 @@ import properties from "../../data/properties";
 function FeaturedProperties() {
   const featured = properties.filter((p) => p.tag === "Hot Listing");
   return (
-    <section className="py-10 sm:py-14 2xl:py-20 px-6 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
+    <section className="py-10 2xl:py-14 px-6 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
       <div className="flex justify-between items-center">
         <H1 label="Featured Properties" title="Land in Fast-Growing Areas" />
         <Link
@@ -27,7 +27,7 @@ function FeaturedProperties() {
           />
         </div> */}
       </div>
-      <div className="max-sm:space-y-6 sm:grid grid-cols-3 gap-4 xl:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {featured.map((property) => (
           <PropertyCard key={property.id} property={property} />
         ))}

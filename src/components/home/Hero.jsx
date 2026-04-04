@@ -3,7 +3,7 @@ import Button from "../Button";
 
 function Hero() {
   return (
-    <section className="z-10 sm:pt-14 2xl:pt-20 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
+    <section className="z-10 sm:pt-10 sm:pt-14 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
       {/* <div className="flex flex-row-reverse justify-between items-center ">
         <video
           autoPlay
@@ -48,13 +48,13 @@ function Hero() {
             type="video/mp4"
           ></source>
         </video>
-        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-70% via-black/70 to-black/0"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-70% via-black/80 to-black/0"></div>
         <div className="relative z-20 space-y-4 sm:space-y-6 text-center flex flex-col items-center">
           <div className="">
             <p className="text-accent tracking-tight max-sm:text-xs sm:mb-2">
               Trusted by 2,000+ investors
             </p>
-            <h1 className="text-4xl sm:text-6xl 2xl:text-7xl font-semibold max-sm:leading-12">
+            <h1 className="text-5xl sm:text-6xl 2xl:text-7xl font-semibold max-sm:leading-14">
               Own Land.
               <br className="sm:hidden" /> Build Wealth.
             </h1>
@@ -62,7 +62,7 @@ function Hero() {
           <p className="text-sm sm:text-xl 2xl:text-2xl opacity-90 font-light">
             Invest in verified properties with flexible plans.
           </p>
-          <div className="mt-4 flex flex-col sm:flex-row gap-5 sm:gap-8">
+          <div className="mt-4 flex flex-col sm:flex-row gap-6 sm:gap-8">
             <Button
               to="/properties"
               label="Browse Properties"

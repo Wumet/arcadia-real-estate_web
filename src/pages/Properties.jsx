@@ -21,7 +21,7 @@ function Properties() {
             corridors.
           </p>
         </div>
-        <div className="max-sm:space-y-6 sm:grid grid-cols-3 gap-4 xl:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {properties.map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}
@@ -29,14 +29,14 @@ function Properties() {
       </section>
 
       {/* cta */}
-      <section className="py-6 sm:py-16 px-6 sm:px-28 xl:px-40 2xl:px-50 space-y-6 flex flex-col items-center bg-[#f0f0f0]">
+      <section className="py-6 sm:py-16 px-6 sm:px-28 xl:px-40 2xl:px-50 space-y-3 sm:space-y-6 flex flex-col items-center">
         <H1
           title="Ready to Secure a Property?"
           label="Contact Us"
           textAlign="center"
-          extraClass="!text-3xl leading-10 sm:!text-[40px] 2xl:text-[54px]"
+          extraClass="!text-2xl sm:leading-10 sm:!text-[40px] 2xl:text-[54px]"
         />
-        <p className="sm:text-[18px] mb-6 text-center">
+        <p className="text-sm sm:text-[18px] mb-6 text-center">
           Speak with our team to identify the land opportunity
           <br aria-hidden className="max-sm:hidden" /> that aligns with your
           investment goals
