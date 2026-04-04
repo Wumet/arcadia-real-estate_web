@@ -3,7 +3,7 @@ import Button from "../Button";
 
 function Hero() {
   return (
-    <section className="z-10 sm:pt-10 sm:pt-14 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
+    <section className="z-10 sm:pt-10 xl:pt-14 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
       {/* <div className="flex flex-row-reverse justify-between items-center ">
         <video
           autoPlay

@@ -6,17 +6,30 @@ import Auth from "../components/modals/Auth";
 import CreateAccount from "../components/modals/CreateAccount";
 
 function PublicLayout() {
-  const [isLogInOpen, setIsLogInOpen] = useState(false);
-  // const [isCreateAccountOpen, setIsCreateAccountOpen] = useState(false);
+  // Auth
+  const [authOpen, setAuthOpen] = useState(false);
+  const [authType, setAuthType] = useState("login"); // "login" or "create"
+
+  const handleOpenAuth = (type) => {
+    setAuthType(type);
+    setAuthOpen(true);
+  };
+
+  const handleCloseAuth = () => {
+    setAuthOpen(false);
+  };
 
   return (
     <>
-      <Header onLogInClick={() => setIsLogInOpen(true)} />
+      <Header
+        onLogInClick={() => handleOpenAuth("login")}
+        onCreateAccountClick={() => handleOpenAuth("create")}
+      />
       <main className="">
         <Outlet></Outlet>
       </main>
       <Footer />
-      <Auth isOpen={isLogInOpen} onClose={() => setIsLogInOpen(false)} />
+      <Auth isOpen={authOpen} onClose={handleCloseAuth} type={authType} />
     </>
   );
 }

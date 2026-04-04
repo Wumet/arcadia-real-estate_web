@@ -1,37 +1,55 @@
 import Input from "../Input";
-import Modal from "../Modal";
+import Modal from "./Modal";
+import Button from "../Button";
 
-function LogIn({ isOpen, onClose, type }) {
+function Auth({ isOpen, onClose, type }) {
   return (
-    <>
-      <title>Login</title>
-      <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-        title={type === "login" ? "Welcome Back!" : "Create Account"}
-        subtitle={
-          type === "login"
-            ? "Input details to access dashboard"
-            : "Input details to create account"
-        }
-      >
-        <form>
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      title={type === "login" ? "Welcome Back!" : "Create Account"}
+      subtitle={
+        type === "login"
+          ? "Input details to access your dashboard"
+          : "Input details to create account"
+      }
+    >
+      <form className="space-y-8">
+        <div className="space-y-4">
           <Input
-            type="text"
+            type="tel"
             name="phone"
             id="phone"
-            placeholder="+23487598498"
+            placeholder="Phone Number"
+            label="Phone Number"
           />
           <Input
             type="password"
-            name="phone"
-            id="phone"
-            placeholder="+23487598498"
+            name="password"
+            id="password"
+            placeholder="Password"
+            label="Password"
           />
-        </form>
-      </Modal>
-    </>
+          {type === "create" && (
+            <Input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+              label="Comfirm Password"
+            />
+          )}
+        </div>
+
+        <Button
+          label={type === "login" ? "Login" : "Create Account"}
+          size="lg"
+          type="submit"
+          extraClass="max-lg:w-full! py-4! h-fit!"
+        />
+      </form>
+    </Modal>
   );
 }
 
-export default LogIn;
+export default Auth;

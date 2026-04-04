@@ -1,4 +1,4 @@
-import { formatNaira } from "../components/utils/formatNaira";
+import { formatNaira } from "../utils/formatNaira";
 
 // src/data/properties.js
 const properties = [

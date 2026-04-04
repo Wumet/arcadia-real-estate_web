@@ -1,5 +1,6 @@
 function Input({
   label,
+  htmlFor,
   type,
   id,
   name,
@@ -13,9 +14,11 @@ function Input({
 }) {
   return (
     <div className="">
-      <label className="pl-2 opacity-70 font-medium text-sm">{label}</label>
+      <label htmlFor={htmlFor} className="pl-2 opacity-70 font-medium text-sm">
+        {label}
+      </label>
       <input
-        className={`mt-2 border-[0.5px] rounded-md p-4 h-fit w-full focus:outline-none focus:border focus:border-primary-500 ${extraClass}`}
+        className={`mt-2 border-[0.5px] border-neutral-500 rounded-md p-4 h-fit w-full focus:outline-none focus:border focus:border-primary-600 ${extraClass}`}
         type={type}
         id={id}
         name={name}

@@ -1,7 +1,6 @@
 import { FaCartArrowDown, FaLocationDot } from "react-icons/fa6";
 import H1 from "../H1";
 import Button from "../Button";
-import { formatNaira } from "../utils/formatNaira";
 
 function PropertyHero({ property }) {
   const monthlyInstallments = property.paymentStructure.monthly;

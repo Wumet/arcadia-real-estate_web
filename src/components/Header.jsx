@@ -21,7 +21,7 @@ const links = [
   { name: "Contact Us", path: "/contact" },
   { name: "Blog", path: "/blog" },
 ];
-function Header({ onLogInClick }) {
+function Header({ onLogInClick, onCreateAccountClick }) {
   const [openDropdown, setOpenDropdown] = useState(null); // track which dropdown is open
   const navRef = useRef();
 
@@ -38,7 +38,7 @@ function Header({ onLogInClick }) {
   }, []);
 
   const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
+  const handleMenuClick = () => {
     setIsOpen(!isOpen);
   };
 
@@ -91,15 +91,32 @@ function Header({ onLogInClick }) {
           ))}
         </ul>
         <div className="max-sm:hidden max-lg:text-sm">
-          <button onClick={onLogInClick} className="pr-2 hover:underline">
+          <button
+            onClick={() => {
+              onLogInClick();
+              setIsOpen(false);
+            }}
+            className="pr-2 hover:underline"
+          >
             Login
           </button>
-          |<button className="pl-2 hover:underline">Create Account</button>
+          |
+          <button
+            onClick={() => {
+              onCreateAccountClick();
+              setIsOpen(false);
+            }}
+            className="pl-2 hover:underline"
+          >
+            Create Account
+          </button>
         </div>
-        <button className="sm:hidden text-xl" onClick={handleClick}>
+        <button className="sm:hidden text-xl" onClick={handleMenuClick}>
           {isOpen ? <MdClose /> : <GiHamburgerMenu />}
         </button>
       </header>
+
+      {/* mobile nav menu  */}
       {/* Overlay */}
       {isOpen && (
         <div
@@ -107,8 +124,7 @@ function Header({ onLogInClick }) {
           onClick={() => setIsOpen(false)}
         />
       )}
-
-      {/* mobile nav menu  */}
+      {/* menu */}
       {isOpen && (
         <div
           className={`text-sm sm:hidden fixed right-0 h-screen w-5/6 bg-white z-40 p-8 shadow-lg transform transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
@@ -159,20 +175,26 @@ function Header({ onLogInClick }) {
             ))}
           </ul>
           {/* call to action */}
-          {/* <div className="mt-12 space-y-6">
+          <div className="mt-12 space-y-6">
             <button
-              onClick={onLogInClick}
+              onClick={() => {
+                onLogInClick();
+                setIsOpen(false);
+              }}
               className="w-full border py-2 rounded-md"
             >
               Login
             </button>
             <button
-              onClick={onCreateAccountClick}
+              onClick={() => {
+                onCreateAccountClick();
+                setIsOpen(false);
+              }}
               className="w-full bg-primary-500 py-2 rounded-md"
             >
               Create Account
             </button>
-          </div> */}
+          </div>
         </div>
       )}
     </>

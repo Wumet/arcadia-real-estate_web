@@ -1,4 +1,4 @@
-import Modal from "../Modal";
+import Modal from "./Modal";
 
 function CreateAccount({ isOpen, onClose }) {
   return (

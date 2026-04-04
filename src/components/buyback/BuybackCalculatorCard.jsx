@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { formatNaira } from "../utils/formatNaira";
+import { formatNaira } from "../../utils/formatNaira";
 
 const DURATION_OPTIONS = [
   { label: "6 months", months: 6, rate: 0.18 },

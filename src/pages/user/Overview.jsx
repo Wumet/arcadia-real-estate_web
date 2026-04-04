@@ -37,7 +37,7 @@ function Dashboard() {
           </p>
         </div>
         {/* overview cards */}
-        <div className="grid grid-flow-col gap-4 sm:gap-6 max-sm:overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+        <div className="grid grid-flow-col gap-4 lg:gap-6 max-sm:overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
           <Card>
             <div className="flex justify-between items-center">
               <span className="bg-secondary-50 flex justify-center items-center p-1.5 rounded-sm">
@@ -137,7 +137,7 @@ function Dashboard() {
             </div>
             <div className="mt-4">
               <table className="w-full text-left text-sm">
-                <tr className="bg-accent/10 text-xs font-medium">
+                <tr className="bg-[#f0f0f0] text-xs font-medium">
                   <th>Estate Name</th>
                   <th>Plot Info</th>
                   <th>Status</th>

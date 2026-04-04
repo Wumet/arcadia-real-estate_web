@@ -19,7 +19,7 @@ function Button({
     outline: "border border-foreground text-foreground",
   };
   const sizes = {
-    lg: "px-6 py-4 text-[16px] h-[44px] xl:h-[50px]",
+    lg: "px-6 py-4 text-[16px] h-[48px] xl:h-[64px]",
     md: "px-3 py-2 text-[14px] sm:text-base h-[36px] sm:h-[40px]",
     sm: "p-1 text-xs h-[32px]",
   };

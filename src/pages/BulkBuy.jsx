@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import WhyUsSection from "../components/WhyUsSection";
 import heroImage from "../assets/heroImage.jpg";
 import estateImage from "../assets/luxury-estate.png";
-import { formatNaira } from "../components/utils/formatNaira";
+import { formatNaira } from "../utils/formatNaira";
 import H1 from "../components/H1";
 import Stats from "../components/Stats";
 
