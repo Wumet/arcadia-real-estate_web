@@ -33,8 +33,8 @@ function FeaturedProperties() {
         ))}
 
         <Link
-          to=""
-          className="mt-6 text-sm text-accent flex items-center justify-center py-4 gap-3 sm:hidden border border-accent rounded-md"
+          to="/properties"
+          className="mt-10 text-sm text-accent flex items-center justify-center py-4 gap-3 sm:hidden border border-accent rounded-md"
         >
           <span>Browse all Properties</span>
           <FaArrowRight className="opacity-80" />

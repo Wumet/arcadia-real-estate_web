@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Button({
   to,
+  onClick,
   label,
   extraClass = "",
   baseClass = "w-fit font-medium flex items-center justify-center gap-2 rounded-md transition-color duration-50 cursor-pointer text-nowrap",
@@ -18,9 +19,9 @@ function Button({
     outline: "border border-foreground text-foreground",
   };
   const sizes = {
-    lg: "px-6 py-4 text-[16px]",
-    md: "px-3 py-2 text-[10px] sm:text-sm",
-    sm: "p-1 text-xs",
+    lg: "px-6 py-4 text-[16px] h-[40px] sm:h-[44px]",
+    md: "px-3 py-2 text-[10px] sm:text-sm h-[36px] sm:h-[40px]",
+    sm: "p-1 text-xs h-[32px]",
   };
 
   if (to) {
@@ -36,6 +37,7 @@ function Button({
   }
   return (
     <button
+      onClick={onClick}
       className={`${baseClass} ${sizes[size]} ${variants[variant]} ${extraClass}`}
     >
       {label}

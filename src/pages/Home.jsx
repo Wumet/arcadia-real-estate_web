@@ -7,6 +7,8 @@ import Testimonials from "../components/home/Testimonials";
 import NewLetterSub from "../components/NewsLetterSub";
 import Services from "../components/home/Services";
 import WhyUs from "../components/WhyUsSection";
+import Stats from "../components/Stats";
+import { useRef } from "react";
 
 function HomePage() {
   // const properties = [
@@ -105,6 +107,7 @@ function HomePage() {
       <Hero />
       <FeaturedProperties />
       <Services />
+      <Stats />
       <WhyUs />
       <Testimonials testimonials={testimonials} />
       <Message />

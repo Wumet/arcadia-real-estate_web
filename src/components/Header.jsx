@@ -67,7 +67,10 @@ function Header({ onLogInClick }) {
                   </button>
                   {/* dropdown */}
                   {openDropdown === link.name && (
-                    <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-fit z-50 py-4">
+                    <ul
+                      ref={navRef}
+                      className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md w-fit z-50 py-4"
+                    >
                       {link.children.map((child) => (
                         <li
                           key={child.name}
@@ -97,11 +100,18 @@ function Header({ onLogInClick }) {
           {isOpen ? <MdClose /> : <GiHamburgerMenu />}
         </button>
       </header>
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-30"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
 
       {/* mobile nav menu  */}
       {isOpen && (
         <div
-          className={`text-sm sm:hidden fixed right-0 w-5/6 bg-white z-20 p-8 shadow-lg transition-[height] duration-500 ease-in-out ${isOpen ? "h-[99vh]" : "max-h-0"}`}
+          className={`text-sm sm:hidden fixed right-0 h-screen w-5/6 bg-white z-40 p-8 shadow-lg transform transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <ul className="text-base flex flex-col gap-8 font-medium tracking-wide opacity-70">
             {links.map((link) => (

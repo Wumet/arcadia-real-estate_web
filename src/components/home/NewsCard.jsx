@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function NewsCard({ announcement }) {
   return (
-    <div className="max-sm:grid max-sm:grid-cols-2 gap-4 h-fit rounded-xl pb-6 grow space-y-2 overflow-hidden">
+    <div className="max-sm:grid max-sm:grid-cols-2 gap-4 h-fit rounded-xl pb-6 grow space-y-2 overflow-hidden!">
       <img
         src={announcement.imageUrl}
         alt={announcement.title}

@@ -6,7 +6,7 @@ function Stats() {
   ];
 
   return (
-    <section className="px-6 sm:px-16 lg:px-32 py-8 sm:py-10">
+    <section className="px-6 sm:px-16 lg:px-32 py-8 sm:py-10 bg-[#f0f0f0]">
       <div className="max-w-6xl mx-auto flex flex-col max-sm:gap-8 sm:flex-row flex-wrap justify-between text-center">
         {STATS.map((s) => (
           <div key={s.label} className="space-y-2">
