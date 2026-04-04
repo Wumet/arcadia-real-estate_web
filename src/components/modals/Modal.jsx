@@ -1,6 +1,19 @@
+import { useEffect } from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
 function Modal({ isOpen, onClose, title, subtitle, children }) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -9,12 +22,12 @@ function Modal({ isOpen, onClose, title, subtitle, children }) {
       onClick={onClose} // click outside closes
     >
       <div
-        className="bg-neutral-100 p-4 sm:p-6 rounded-xl sm:max-w-md w-full"
+        className="bg-neutral-100 p-6 sm:p-8 xl:p-10 rounded-xl sm:max-w-md w-full"
         onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
       >
         <div className="flex justify-between items-start">
           <div>
-            <h1 className="text-xl sm:text-3xl xl:text-4xl font-medium">
+            <h1 className="text-2xl sm:text-3xl xl:text-4xl font-medium">
               {title}
             </h1>
             {subtitle && (

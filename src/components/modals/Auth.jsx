@@ -45,7 +45,7 @@ function Auth({ isOpen, onClose, type }) {
           label={type === "login" ? "Login" : "Create Account"}
           size="lg"
           type="submit"
-          extraClass="max-lg:w-full! py-4! h-fit!"
+          extraClass="max-lg:w-full! sm:py-4! sm:h-fit!"
         />
       </form>
     </Modal>

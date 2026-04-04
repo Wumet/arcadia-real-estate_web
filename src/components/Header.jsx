@@ -174,14 +174,14 @@ function Header({ onLogInClick, onCreateAccountClick }) {
               </li>
             ))}
           </ul>
-          {/* call to action */}
-          <div className="mt-12 space-y-6">
+          {/* Auth ctas*/}
+          <div className="mt-12 space-y-5">
             <button
               onClick={() => {
                 onLogInClick();
                 setIsOpen(false);
               }}
-              className="w-full border py-2 rounded-md"
+              className="w-full border-[.5px] border-neutral-400 py-3 rounded-md font-medium"
             >
               Login
             </button>
@@ -190,7 +190,7 @@ function Header({ onLogInClick, onCreateAccountClick }) {
                 onCreateAccountClick();
                 setIsOpen(false);
               }}
-              className="w-full bg-primary-500 py-2 rounded-md"
+              className="w-full bg-primary-500 py-3 rounded-md font-medium"
             >
               Create Account
             </button>

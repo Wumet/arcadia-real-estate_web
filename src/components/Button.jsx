@@ -20,7 +20,7 @@ function Button({
   };
   const sizes = {
     lg: "px-6 py-4 text-[16px] h-[48px] xl:h-[64px]",
-    md: "px-3 py-2 text-[14px] sm:text-base h-[36px] sm:h-[40px]",
+    md: "px-3 py-2 text-[14px] sm:text-base h-[38px] sm:h-[40px]",
     sm: "p-1 text-xs h-[32px]",
   };
 
