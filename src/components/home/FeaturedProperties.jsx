@@ -17,15 +17,6 @@ function FeaturedProperties() {
           <span>Browse all Properties</span>
           <FaArrowRight className="opacity-80" />
         </Link>
-        {/* <div className="">
-          <Button
-            to="/properties"
-            size="md"
-            label="Browse All Properties"
-            variant="outline"
-            Icon={FaArrowRight}
-          />
-        </div> */}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {featured.map((property) => (

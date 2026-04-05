@@ -1,8 +1,8 @@
-import H1 from "../components/H1";
-import PropertyCard from "../components/PropertyCard";
-import properties from "../data/properties";
-import Services from "../components/home/Services";
-import Button from "../components/Button";
+import H1 from "../../components/H1";
+import PropertyCard from "../../components/PropertyCard";
+import properties from "../../data/properties";
+import Services from "../../components/home/Services";
+import Button from "../../components/Button";
 
 function Properties() {
   return (

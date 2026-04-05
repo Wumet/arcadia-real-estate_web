@@ -1,13 +1,13 @@
-import FeaturedProperties from "../components/home/FeaturedProperties";
-import Hero from "../components/home/Hero";
-import WhatsNew from "../components/home/WhatsNew";
-import imageUrl from "../assets/heroImage.jpg";
-import Message from "../components/home/Message";
-import Testimonials from "../components/home/Testimonials";
-import NewLetterSub from "../components/NewsLetterSub";
-import Services from "../components/home/Services";
-import WhyUs from "../components/WhyUsSection";
-import Stats from "../components/Stats";
+import FeaturedProperties from "../../components/home/FeaturedProperties";
+import Hero from "../../components/home/Hero";
+import WhatsNew from "../../components/home/WhatsNew";
+import imageUrl from "../../assets/heroImage.jpg";
+import Message from "../../components/home/Message";
+import Testimonials from "../../components/home/Testimonials";
+import NewLetterSub from "../../components/NewsLetterSub";
+import Services from "../../components/home/Services";
+import WhyUs from "../../components/WhyUsSection";
+import Stats from "../../components/Stats";
 import { useRef } from "react";
 
 function HomePage() {

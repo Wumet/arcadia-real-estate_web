@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Auth from "../components/modals/Auth";
-import CreateAccount from "../components/modals/CreateAccount";
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import Auth from "../../components/modals/Auth";
 
 function PublicLayout() {
   // Auth

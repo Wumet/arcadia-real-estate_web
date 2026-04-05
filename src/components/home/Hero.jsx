@@ -3,7 +3,7 @@ import Button from "../Button";
 
 function Hero() {
   return (
-    <section className="z-10 sm:pt-10 xl:pt-14 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
+    <section className="z-10 xsm:pt-10 xxl:pt-14 xsm:px-10 xxl:px-40 x2xl:px-50 space-y-8 md:space-y-12">
       {/* <div className="flex flex-row-reverse justify-between items-center ">
         <video
           autoPlay
@@ -35,7 +35,7 @@ function Hero() {
           </div>
         </div>
       </div> */}
-      <div className="relative h-fit sm:rounded-xl sm:h-[40vh] md:h-[60vh] flex justify-center items-center py-20 max-sm:px-6 text-neutral-300 z-10 overflow-hidden">
+      <div className="relative h-fit sm:h-[40vh] md:h-[60vh] flex justify-center items-center py-20 max-sm:px-6 text-neutral-300 z-10 overflow-hidden">
         <video
           autoPlay
           loop

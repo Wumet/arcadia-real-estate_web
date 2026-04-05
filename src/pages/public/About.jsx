@@ -1,12 +1,10 @@
-import Image from "../assets/luxury-estate.png";
-import memberImage from "../assets/ceo.jpg";
-import Testimonials from "../components/home/Testimonials";
-import Services from "../components/home/Services";
-import Button from "../components/Button";
+import Testimonials from "../../components/home/Testimonials";
+import Services from "../../components/home/Services";
+import Button from "../../components/Button";
 import { GrSecure } from "react-icons/gr";
 import { SiFuturelearn } from "react-icons/si";
 import { PiHandshake } from "react-icons/pi";
-import H1 from "../components/H1";
+import H1 from "../../components/H1";
 
 const values = [
   {
@@ -34,19 +32,22 @@ const values = [
 const teamMembers = [
   {
     id: "1",
-    image: memberImage,
+    image:
+      "https://res.cloudinary.com/do36hdyrf/image/upload/black-businessman-happy-expression_apiwjn.jpg",
     memberName: "Joseph Smith",
     title: "Founder & Managing Director",
   },
   {
     id: "2",
-    image: memberImage,
+    image:
+      "https://res.cloudinary.com/do36hdyrf/image/upload/black-businessman-happy-expression_apiwjn.jpg",
     memberName: "Smith Wath",
     title: "Head of Operations & Documentation",
   },
   {
     id: "3",
-    image: memberImage,
+    image:
+      "https://res.cloudinary.com/do36hdyrf/image/upload/support_mqxg9o.jpg",
     memberName: "Smith Wath",
     title: "Head of Investment & Client Relation",
   },
@@ -57,7 +58,7 @@ function About() {
       {/* hero */}
       <section className="relative h-[40vh] sm:h-[50vh] lg:h-[60vh] px-6 sm:px-20 xl:px-40 2xl:px-50 bg-[url(https://res.cloudinary.com/do36hdyrf/image/upload/group-afro-americans-working-together_g5udeo.jpg)] bg-cover bg-no-repeat bg-center flex justify-center items-center">
         {/* overlay */}
-        <div className="h-full absolute inset-0 bg-black/85 z-10"></div>
+        <div className="h-full absolute inset-0 bg-black/70 z-10"></div>
         {/* content */}
         <div className="relative text-neutral-200 text-center space-y-4 z-20">
           <h1 className="text-4xl sm:text-5xl xl:text-6xl font-[510] lg:leading-14">
@@ -160,7 +161,7 @@ function About() {
               <img
                 src={member.image}
                 alt={member.title}
-                className="w-full h-80 rounded-lg"
+                className="w-full h-80 rounded-lg object-cover object-center"
               />
               <div className="px-1 pb-3">
                 <p className="sm:text-lg font-semibold">{member.memberName}</p>

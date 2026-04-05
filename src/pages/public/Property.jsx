@@ -1,6 +1,6 @@
-import properties from "../data/properties";
-import PropertyHero from "../components/property/PropertyHero";
-import PaymentStructure from "../components/property/PaymentStructure";
+import properties from "../../data/properties";
+import PropertyHero from "../../components/property/PropertyHero";
+import PaymentStructure from "../../components/property/PaymentStructure";
 import { useParams } from "react-router-dom";
 
 function Property() {

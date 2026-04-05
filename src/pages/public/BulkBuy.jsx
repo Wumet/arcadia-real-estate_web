@@ -1,13 +1,13 @@
 import { FaCircleCheck, FaLocationDot } from "react-icons/fa6";
 import { GiLightBulb } from "react-icons/gi";
 import { MdBarChart, MdWork } from "react-icons/md";
-import Button from "../components/Button";
-import WhyUsSection from "../components/WhyUsSection";
-import heroImage from "../assets/heroImage.jpg";
-import estateImage from "../assets/luxury-estate.png";
-import { formatNaira } from "../utils/formatNaira";
-import H1 from "../components/H1";
-import Stats from "../components/Stats";
+import Button from "../../components/Button";
+import WhyUsSection from "../../components/WhyUsSection";
+import heroImage from "../../assets/heroImage.jpg";
+import estateImage from "../../assets/luxury-estate.png";
+import { formatNaira } from "../../utils/formatNaira";
+import H1 from "../../components/H1";
+import Stats from "../../components/Stats";
 
 const HERO_CHECKS = [
   "Low entry price",

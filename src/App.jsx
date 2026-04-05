@@ -1,23 +1,25 @@
 import { Routes, Route } from "react-router-dom";
-import PublicLayout from "./pages/PublicLayout";
-import Home from "./pages/Home";
-import Properties from "./pages/Properties";
-import Property from "./pages/Property";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
+import PublicLayout from "./pages/public/PublicLayout";
+import Home from "./pages/public/Home";
+import Properties from "./pages/public/Properties";
+import Property from "./pages/public/Property";
+import About from "./pages/public/About";
+import Contact from "./pages/public/Contact";
+import Blog from "./pages/public/Blog";
 import DashboardLayout from "./pages/user/Layout";
 import Overview from "./pages/user/Overview";
 import MyProperties from "./pages/user/MyProperties";
 import Wallet from "./pages/user/Wallet";
 import Payments from "./pages/user/Payments";
 import Settings from "./pages/user/Settings";
-import BuyBack from "./pages/BuyBack";
-import BulkBuy from "./pages/BulkBuy";
+import BuyBack from "./pages/public/BuyBack";
+import BulkBuy from "./pages/public/BulkBuy";
+import ScrollToTop from "./components/ScrollToTTop";
 
 function App() {
   return (
-    <div className="">
+    <>
+      <ScrollToTop />
       <Routes>
         <Route element={<PublicLayout />}>
           <Route index element={<Home />} />
@@ -39,7 +41,7 @@ function App() {
           <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

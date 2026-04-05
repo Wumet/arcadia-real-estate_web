@@ -1,9 +1,9 @@
 import { MdOutlineLocationOn, MdOutlineMail } from "react-icons/md";
-import H1 from "../components/H1";
-import Header from "../components/Header";
-import Input from "../components/Input";
+import H1 from "../../components/H1";
+import Header from "../../components/Header";
+import Input from "../../components/Input";
 import { FiPhone } from "react-icons/fi";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 
 function ContactUs() {
   return (

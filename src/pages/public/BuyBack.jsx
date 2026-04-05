@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import BuybackCalculatorCard from "../components/buyback/BuybackCalculatorCard";
-import BuybackInterest from "../components/buyback/BuybackInterest";
-import H1 from "../components/H1";
-import { formatNaira } from "../utils/formatNaira";
+import BuybackCalculatorCard from "../../components/buyback/BuybackCalculatorCard";
+import BuybackInterest from "../../components/buyback/BuybackInterest";
+import H1 from "../../components/H1";
+import { formatNaira } from "../../utils/formatNaira";
 import { CgFileDocument } from "react-icons/cg";
 import { MdDomainVerification } from "react-icons/md";
 import { LiaFileContractSolid } from "react-icons/lia";

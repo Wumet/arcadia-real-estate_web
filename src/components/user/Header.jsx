@@ -28,7 +28,7 @@ function Header() {
 
   return (
     <>
-      <header className="flex justify-between bg-white px-8 xl:px-40 py-5 sticky top-0 left-0 right-0 z-10">
+      <header className="flex justify-between bg-background px-8 xl:px-40 py-5 sticky top-0 left-0 right-0 z-10">
         <Link to="/" className="">
           <img src={Logo} alt="Acardia Logo" className="w-25 sm:w-30 xl:w-35" />
         </Link>
