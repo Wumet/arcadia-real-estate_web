@@ -7,7 +7,7 @@ function PropertyHero({ property }) {
   const weeklyInstallments = property.paymentStructure.weekly;
 
   return (
-    <section className="py-10 xl:py-14 px-6 sm:px-10 xl:px-40 2xl:px-50 sapce-y-6 md:space-y-10 xl:space-y-14 ">
+    <section className="py-10 xl:py-14 px-6 sm:px-10 xl:px-40 2xl:px-50 space-y-6 md:space-y-10 xl:space-y-14 ">
       <H1 title="Payment Structure" textAlign="center" />
       <div className="space-y-4 md:space-y-8">
         {/* outright payment */}

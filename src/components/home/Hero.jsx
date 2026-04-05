@@ -56,7 +56,7 @@ function Hero() {
             </p>
             <h1 className="text-5xl sm:text-6xl 2xl:text-7xl font-semibold max-sm:leading-14">
               Own Land.
-              <br className="sm:hidden" /> Build Wealth.
+              <br aria-hidden className="sm:hidden" /> Build Wealth.
             </h1>
           </div>
           <p className="text-sm sm:text-xl 2xl:text-2xl opacity-90 font-light">

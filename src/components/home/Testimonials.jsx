@@ -9,7 +9,7 @@ function Testimonials({ testimonials }) {
         title="What Our Investors Say"
         textAlign="center"
       />
-      <div className="flex max-sm:flex-col gap-4">
+      <div className="flex gap-4 max-sm:overflow-auto no-scrollbar">
         {testimonials.map((t) => (
           <TestimonialCard key={t.id} t={t}></TestimonialCard>
         ))}

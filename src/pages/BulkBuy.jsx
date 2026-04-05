@@ -103,7 +103,7 @@ function BulkBuy() {
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-10 xl:gap-16 2xl:gap-20 items-center justify-center">
           {/* left */}
           <div className="w-full lg:max-w-[540px] shrink-0">
-            <div className="max-sm:hidden relative rounded-xl overflow-hidden xl:aspect-[480/640] max-sm:h-20 max-lg:h-40 lg:max-h-[50vh] xl:max-h-[60vh] w-full">
+            <div className="max-sm:hidden relative rounded-xl overflow-hidden xl:aspect-480/640 max-sm:h-20 max-lg:h-40 lg:max-h-[50vh] xl:max-h-[60vh] w-full">
               <img
                 src="https://res.cloudinary.com/do36hdyrf/image/upload/v1775165931/ariel3_fx1ljy.jpg"
                 alt=""
@@ -124,6 +124,7 @@ function BulkBuy() {
                   Market Does
                 </>
               }
+              extraClass="max-sm:text-3xl! max-sm:leading-10!"
             />
             <div className="space-y-4 leading-relaxed sm:w-2/3">
               <p>

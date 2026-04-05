@@ -1,7 +1,7 @@
 import ServiceCard from "./ServiceCard";
 import H1 from "../H1";
 
-function Services() {
+function Services({ title = "Investment Strategies" }) {
   const services = [
     {
       id: "1",
@@ -38,7 +38,7 @@ function Services() {
       className="py-10 sm:py-14 xl:py-20  px-6 sm:px-10 xl:px-40 2xl:px-50 space-y-8 sm:space-y-12"
     >
       <div className="flex max-sm:flex-col justify-between sm:items-center">
-        <H1 label="Our Services" title="Investment Strategies" />
+        <H1 label="Our Services" title={title} />
         <p className="xl:text-xl text-neutral-600 text-rightx">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Etiam
           sit amet diam elit.

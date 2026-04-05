@@ -134,11 +134,11 @@ function BuyBack() {
     <main className="bg-background">
       {/* Hero */}
       <section className="px-6 sm:px-10 xl:px-36 2xl:px-44 py-4 sm:py-14 2xl:py-20 sm:text-lg">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-10 lg:gap-14 items-start lg:items-center">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row gap-10 lg:gap-14 items-start sm:items-center">
           <div className="flex-1 space-y-4 sm:flex flex-col">
             <H1
               title={<>Arcadia Land Buyback Investment</>}
-              extraClass="max-sm:!text-center"
+              extraClass="max-sm:text-3xl! max-sm:leading-10!"
             />
             <p className="leading-relaxed">
               Invest in physical land today. Receive a pre-agreed return within
@@ -146,10 +146,6 @@ function BuyBack() {
             </p>
 
             <div className="pt-2">
-              {/* <Button
-                onClick={onHeroCTA}
-                label="Submit Expression of Interest"
-              /> */}
               <button
                 type="button"
                 onClick={onHeroCTA}
@@ -157,16 +153,6 @@ function BuyBack() {
               >
                 Submit Expression of Interest
               </button>
-            </div>
-
-            <div className="relative mt-8 sm:mt-12 2xl:mt-16 hidden sm:block w-full">
-              <img
-                src="https://res.cloudinary.com/do36hdyrf/image/upload/micheile-henderson-ZVprbBmT8QA-unsplash_ybfkxr.jpg"
-                alt=""
-                className="rounded-xl w-full h-[240px] object-cover opacity-90"
-              />
-              {/* overlay */}
-              <div className="rounded-xl absolute inset-0 bg-black/50"></div>
             </div>
           </div>
 

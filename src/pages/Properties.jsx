@@ -7,13 +7,7 @@ import Button from "../components/Button";
 function Properties() {
   return (
     <main className="pt-4 sm:py-14 2xl:py-20 ">
-      {/* search & filter */}
-      <div className="rounded-xl border border-gray-300 sm:w-5/6 mx-6 p-6">
-        <input type="search" name="" id="" />
-      </div>
-
-      {/* properties */}
-      <section className="pt-5 pb-10 sm:py-10 px-6 sm:px-20 xl:px-40 2xl:px-50 space-y-6 lg:space-y-12">
+      <section className="px-6 sm:px-20 xl:px-40 2xl:px-50 space-y-6 lg:space-y-12">
         <div>
           <H1 title="Available Land Opportunities" />
           <p>
@@ -21,6 +15,10 @@ function Properties() {
             corridors.
           </p>
         </div>
+        {/* search & filter */}
+        {/* <div className="rounded-xl border border-gray-300 sm:w-5/6 p-6">
+          <input type="search" name="" id="" />
+        </div> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {properties.map((property) => (
             <PropertyCard key={property.id} property={property} />
