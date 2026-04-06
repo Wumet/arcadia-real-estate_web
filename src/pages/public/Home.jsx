@@ -103,15 +103,12 @@ function HomePage() {
 
   return (
     <main>
-      <title>Home</title>
       <Hero />
       <FeaturedProperties />
       <Services />
-      <Stats />
       <WhyUs />
       <Testimonials testimonials={testimonials} />
       <Message />
-      <WhatsNew announcements={announcements} />
       <NewLetterSub />
     </main>
   );
