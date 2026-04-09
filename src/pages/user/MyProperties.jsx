@@ -1,11 +1,3 @@
-import { PiBuildings, PiBuildingsFill } from "react-icons/pi";
-import Card from "../../components/user/Card";
-import Header from "../../components/user/Header";
-import { FaArrowTrendUp } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import { TbBrandGoogleAnalytics } from "react-icons/tb";
-import { IoWalletOutline } from "react-icons/io5";
-import { MdOutlinePendingActions } from "react-icons/md";
 import MyPropertyCard from "../../components/user/MyPropertyCard";
 
 function MyProperties() {
@@ -20,7 +12,7 @@ function MyProperties() {
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols">
-        <MyPropertyCard />
+        {/* <MyPropertyCard /> */}
       </div>
     </main>
   );

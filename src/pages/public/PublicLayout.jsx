@@ -28,7 +28,12 @@ function PublicLayout() {
         <Outlet></Outlet>
       </main>
       <Footer />
-      <Auth isOpen={authOpen} onClose={handleCloseAuth} type={authType} />
+      <Auth
+        isOpen={authOpen}
+        onClose={handleCloseAuth}
+        type={authType}
+        setType={setAuthType}
+      />
     </>
   );
 }

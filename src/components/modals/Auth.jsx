@@ -2,7 +2,7 @@ import Input from "../Input";
 import Modal from "./Modal";
 import Button from "../Button";
 
-function Auth({ isOpen, onClose, type }) {
+function Auth({ isOpen, onClose, type, setType }) {
   return (
     <Modal
       isOpen={isOpen}
@@ -22,6 +22,7 @@ function Auth({ isOpen, onClose, type }) {
             id="phone"
             placeholder="Phone Number"
             label="Phone Number"
+            htmlFor="phone"
           />
           <Input
             type="password"
@@ -29,6 +30,7 @@ function Auth({ isOpen, onClose, type }) {
             id="password"
             placeholder="Password"
             label="Password"
+            htmlFor="password"
           />
           {type === "create" && (
             <Input
@@ -37,6 +39,7 @@ function Auth({ isOpen, onClose, type }) {
               id="confirmPassword"
               placeholder="Confirm Password"
               label="Comfirm Password"
+              htmlFor="confirmPassword"
             />
           )}
         </div>
@@ -48,6 +51,31 @@ function Auth({ isOpen, onClose, type }) {
           extraClass="max-lg:w-full! sm:py-4! sm:h-fit!"
         />
       </form>
+      <p className="text-sm mt-8 flex gap-1 justify-center">
+        {type === "login" ? (
+          <>
+            Don't have an account?
+            <button
+              onClick={() => {
+                setType("signup");
+              }}
+              className="text-accent font-medium"
+            >
+              Create Account
+            </button>
+          </>
+        ) : (
+          <>
+            Already have an account?
+            <button
+              onClick={() => setType("login")}
+              className="text-accent font-medium"
+            >
+              Login
+            </button>
+          </>
+        )}
+      </p>
     </Modal>
   );
 }

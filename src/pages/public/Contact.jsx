@@ -12,19 +12,19 @@ function ContactUs() {
 
       {/* contact details for mobile */}
       <div className="space-y-4 sm:hidden">
-        <p className="flex items-center gap-2">
+        <p className="flex items-center gap-2 border border-gray-300 p-4 rounded-md">
           <span className="bg-accent/20 p-2 rounded-full">
             <MdOutlineMail className="text-accent text-xl " />
           </span>
           Hello@arcadiang.com
         </p>
-        <p className="flex items-center gap-2">
+        <p className="flex items-center gap-2 border border-gray-300 p-4 rounded-md">
           <span className="bg-accent/20 p-2 rounded-full">
             <FiPhone className="text-accent text-xl " />
           </span>
           +2348101319125
         </p>
-        <p className="flex items-center gap-2">
+        <p className="flex items-center gap-2 border border-gray-300 p-4 rounded-md">
           <span className="bg-accent/20 p-2 rounded-full">
             <MdOutlineLocationOn className="text-accent text-xl " />
           </span>
@@ -87,19 +87,19 @@ function ContactUs() {
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10">
         <div className="border rounded-xl">map</div>
         <div className="text-xl space-y-4 max-sm:hidden">
-          <p className="flex items-center gap-2">
+          <p className="flex items-center gap-2 border border-gray-300 p-6 rounded-md">
             <span className="bg-accent/20 p-2 rounded-full">
               <MdOutlineMail className="text-accent text-2xl " />
             </span>
             Hello@arcadiang.com
           </p>
-          <p className="flex items-center gap-2">
+          <p className="flex items-center gap-2 border border-gray-300 p-6 rounded-md">
             <span className="bg-accent/20 p-2 rounded-full">
               <FiPhone className="text-accent text-2xl " />
             </span>
             +2348101319125
           </p>
-          <p className="flex items-center gap-2">
+          <p className="flex items-center gap-2 border border-gray-300 p-6 rounded-md">
             <span className="bg-accent/20 p-2 rounded-full">
               <MdOutlineLocationOn className="text-accent text-2xl " />
             </span>
