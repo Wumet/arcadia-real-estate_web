@@ -12,14 +12,14 @@ function Button({
   Icon,
 }) {
   const variants = {
-    primary: "bg-primary-500 text-primary-900 hover:bg-primary-400",
+    primary: "bg-primary-400 text-primary-900 hover:bg-primary-500",
     secondary:
       "bg-secondary-500 text-secondary-900 hover:bg-primary-500 hover:text-neutral-100",
     tertiary: "bg-primary-500/10",
     outline: "border border-foreground text-foreground",
   };
   const sizes = {
-    lg: "px-6 py-4 text-[16px] h-[48px] xl:h-[64px]",
+    lg: "px-6 py-4 text-[16px] h-[48px] xl:h-[56px]",
     md: "px-3 py-2 text-[14px] sm:text-base h-[38px] sm:h-[40px]",
     sm: "p-1 text-xs h-[32px]",
   };

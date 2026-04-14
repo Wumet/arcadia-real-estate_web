@@ -19,7 +19,7 @@ const links = [
   },
   { name: "About", path: "/about" },
   { name: "Contact Us", path: "/contact" },
-  { name: "Blog", path: "/blog" },
+  // { name: "Blog", path: "/blog" },
 ];
 function Header({ onLogInClick, onCreateAccountClick }) {
   const [openDropdown, setOpenDropdown] = useState(null); // track which dropdown is open
@@ -108,7 +108,7 @@ function Header({ onLogInClick, onCreateAccountClick }) {
             }}
             className="pl-2 hover:underline"
           >
-            Create Account
+            Signup
           </button>
         </div>
         <button className="sm:hidden text-xl" onClick={handleMenuClick}>
@@ -192,7 +192,7 @@ function Header({ onLogInClick, onCreateAccountClick }) {
               }}
               className="w-full bg-primary-500 py-3 rounded-md font-medium"
             >
-              Create Account
+              Signup
             </button>
           </div>
         </div>

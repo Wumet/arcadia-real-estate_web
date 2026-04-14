@@ -1,13 +1,14 @@
 import { formatNaira } from "../utils/formatNaira";
 
-// src/data/properties.js
+
 const properties = [
   {
     id: "1",
     propertyName: "The Azure Residence",
     location: "Old GRA, PH",
     startingPrice: formatNaira(450000),
-    tag: "Hot Listing",
+    featured: true,
+    recommended: false,
     images: {
       hero: "https://res.cloudinary.com/do36hdyrf/image/upload/point3d-commercial-imaging-ltd-swXXVeluuNM-unsplash_ntycsv.jpg",
       gallery: ["/images/azure/1.jpg","/images/azure/2.jpg","/images/azure/3.jpg"],
@@ -45,7 +46,8 @@ const properties = [
     propertyName: "The Azure Residence",
     location: "Old GRA, PH",
     startingPrice: formatNaira(450000),
-    tag: "Hot Listing",
+    featured: true,
+    recommended: false,
     images: {
       hero: "https://res.cloudinary.com/do36hdyrf/image/upload/point3d-commercial-imaging-ltd-swXXVeluuNM-unsplash_ntycsv.jpg",
       gallery: ["/images/azure/1.jpg","/images/azure/2.jpg","/images/azure/3.jpg"],
@@ -80,7 +82,8 @@ const properties = [
     propertyName: "The Azure Residence",
     location: "Old GRA, PH",
     startingPrice: formatNaira(450000),
-    tag: "Hot Listing",
+    featured: true,
+    recommended: false,
     images: {
       hero: "https://res.cloudinary.com/do36hdyrf/image/upload/land3_gmfwwu.jpg",
       gallery: ["/images/azure/1.jpg","/images/azure/2.jpg","/images/azure/3.jpg"],

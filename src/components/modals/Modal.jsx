@@ -22,24 +22,27 @@ function Modal({ isOpen, onClose, title, subtitle, children }) {
       onClick={onClose} // click outside closes
     >
       <div
-        className="bg-neutral-100 p-6 sm:p-8 xl:p-10 rounded-xl sm:max-w-md w-full"
+        className="bg-neutral-100 p-6 sm:p-10 xl:p-10 rounded-xl sm:max-w-xl xl:max-w-2xl w-full"
         onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
       >
         <div className="flex justify-between items-start">
           <div>
-            <h1 className="text-2xl sm:text-3xl xl:text-4xl font-medium">
+            <h1 className="text-2xl sm:text-3xl xl:text-4xl font-semibold text-nowrap">
               {title}
             </h1>
             {subtitle && (
-              <p className="mt-1 text-sm xl:text-base font-light">{subtitle}</p>
+              <p className="mt-2 text-sm sm:text-base font-light">{subtitle}</p>
             )}
           </div>
-          <button onClick={onClose} className="text-red-500/70 text-2xl">
+          <button
+            onClick={onClose}
+            className="-mt-5 -mr-4 text-red-500/70 text-2xl"
+          >
             <IoMdCloseCircleOutline />
           </button>
         </div>
 
-        <div className="mt-4">{children}</div>
+        <div className="mt-4 sm:mt-6">{children}</div>
       </div>
     </div>
   );

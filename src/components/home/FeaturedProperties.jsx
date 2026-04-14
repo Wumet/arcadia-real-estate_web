@@ -1,11 +1,22 @@
+import { useEffect, useState } from "react";
+import H1 from "../H1";
 import { Link } from "react-router-dom";
 import PropertyCard from "../PropertyCard";
 import { FaArrowRight } from "react-icons/fa6";
-import H1 from "../H1";
-import properties from "../../data/properties";
+import { getFeaturedProperties } from "../../api/properties";
 
 function FeaturedProperties() {
-  const featured = properties.filter((p) => p.tag === "Hot Listing");
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    const load = async () => {
+      const data = await getFeaturedProperties();
+      setProperties(data);
+    };
+
+    load();
+  }, []);
+
   return (
     <section className="py-10 2xl:py-14 px-6 sm:px-10 xl:px-40 2xl:px-50 space-y-8 md:space-y-12">
       <div className="flex justify-between items-center">
@@ -19,7 +30,7 @@ function FeaturedProperties() {
         </Link>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        {featured.map((property) => (
+        {properties.map((property) => (
           <PropertyCard key={property.id} property={property} />
         ))}
 

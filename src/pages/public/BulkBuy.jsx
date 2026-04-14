@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { FaCircleCheck, FaLocationDot } from "react-icons/fa6";
 import { GiLightBulb } from "react-icons/gi";
 import { MdBarChart, MdWork } from "react-icons/md";
@@ -96,6 +97,12 @@ const STEPS = [
 ];
 
 function BulkBuy() {
+  const listingRef = useRef(null);
+
+  const onHeroCTA = () => {
+    listingRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <main className="">
       {/* Hero */}
@@ -154,17 +161,17 @@ function BulkBuy() {
             </div>
             <div className="flex flex-col-reverse sm:flex-row gap-6 sm:gap-8">
               <Button
-                to="/properties"
-                label="View Available Listings"
+                to="#"
+                label="Join the BulkBuy Program"
                 variant="outline"
                 extraClass="max-sm:!w-full"
                 size="lg"
               />
               <Button
-                to="/contact"
-                label="Join the BulkBuy Program"
+                label="View Available Listings"
                 extraClass="max-sm:!w-full"
                 size="lg"
+                onClick={onHeroCTA}
               />
             </div>
           </div>
@@ -268,7 +275,10 @@ function BulkBuy() {
       </section>
 
       {/* Featured bulk */}
-      <section className="px-6 sm:px-10 xl:px-36 2xl:px-44 py-10 sm:py-16 space-y-10 sm:space-y-16 bg-background">
+      <section
+        ref={listingRef}
+        className="px-6 sm:px-10 xl:px-36 2xl:px-44 py-10 sm:py-16 space-y-10 sm:space-y-16 bg-background"
+      >
         <div className="space-y-4 max-w-4xl">
           <H1 label="Featured" title="Available bulk land opportunity" />
         </div>

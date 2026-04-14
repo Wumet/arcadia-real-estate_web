@@ -28,6 +28,16 @@ function Message() {
             Founder & CEO, Arcadia Luxury Real Estate
           </p>
         </div>
+        <div className="my-4 flex max-sm:justify-between gap-14">
+          <div className="">
+            <p className="text-xl sm:text-[30px] font-semibold">5000+</p>
+            <p className="text-xs sm:text-sm text-gray-500">Plots Allocated</p>
+          </div>
+          <div className="">
+            <p className="text-xl sm:text-[30px] font-semibold">10+</p>
+            <p className="text-xs sm:text-sm text-gray-500">Locations</p>
+          </div>
+        </div>
       </div>
     </section>
   );

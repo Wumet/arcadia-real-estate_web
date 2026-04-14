@@ -7,11 +7,13 @@ function Auth({ isOpen, onClose, type, setType }) {
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      title={type === "login" ? "Welcome Back!" : "Create Account"}
+      title={
+        type === "login" ? "Welcome Back!" : "Sign Up to purchase property"
+      }
       subtitle={
         type === "login"
           ? "Input details to access your dashboard"
-          : "Input details to create account"
+          : "Input details to signup"
       }
     >
       <form className="space-y-8">
@@ -48,7 +50,7 @@ function Auth({ isOpen, onClose, type, setType }) {
           label={type === "login" ? "Login" : "Create Account"}
           size="lg"
           type="submit"
-          extraClass="max-lg:w-full! sm:py-4! sm:h-fit!"
+          extraClass="max-lg:w-full! sm:py-[14px]! sm:h-fit!"
         />
       </form>
       <p className="text-sm mt-8 flex gap-1 justify-center">
@@ -59,9 +61,9 @@ function Auth({ isOpen, onClose, type, setType }) {
               onClick={() => {
                 setType("signup");
               }}
-              className="text-accent font-medium"
+              className="text-accent font-medium max-md:underline md:hover:underline"
             >
-              Create Account
+              Signup
             </button>
           </>
         ) : (
@@ -69,7 +71,7 @@ function Auth({ isOpen, onClose, type, setType }) {
             Already have an account?
             <button
               onClick={() => setType("login")}
-              className="text-accent font-medium"
+              className="text-accent font-medium max-md:underline md:hover:underline"
             >
               Login
             </button>
