@@ -1,21 +1,24 @@
-import properties from "../data/properties";
+// api/properties.js
 
-// Get ALL properties
-export const getProperties = async () => {
+export async function getProperties() {
+  const { default: properties } = await import("../data/properties");
   return properties;
-};
+}
 
 // Featured (homepage)
-export const getFeaturedProperties = async () => {
+export async function getFeaturedProperties() {
+  const properties = await getProperties();
   return properties.filter((p) => p.featured);
-};
+}
 
 // Recommended (dashboard)
-export const getRecommendedProperties = async () => {
+export async function getRecommendedProperties() {
+  const properties = await getProperties();
   return properties.filter((p) => p.recommended);
-};
+}
 
 // Get single property (details page)
-export const getPropertyById = async (id) => {
+export async function getPropertyById(id) {
+  const properties = await getProperties();
   return properties.find((p) => p.id === Number(id));
-};
+}

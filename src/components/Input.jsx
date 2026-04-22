@@ -18,7 +18,7 @@ function Input({
         {label}
       </label>
       <input
-        className={`mt-2 border-[0.5px] border-neutral-500 rounded-md p-3 lg:p-4 h-fit w-full focus:outline-none focus:border focus:border-primary-600 ${extraClass}`}
+        className={`mt-2 bg-neutral-100 rounded-md p-3 lg:p-4 h-fit w-full focus:outline-none focus:border-[0.5px] focus:border-primary-800 ${extraClass}`}
         type={type}
         id={id}
         name={name}
