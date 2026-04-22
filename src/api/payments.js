@@ -1,7 +1,7 @@
 export async function getUserPayments() {
   try {
-    const module = await import("../data/payments");
-    return module.default;
+    const getUserPayments = await import("../data/payments");
+    return getUserPayments.default;
 
   } catch (error) {
     console.error(error);
